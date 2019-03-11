@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SHOW DATA</title>
+    <meta charset="utf-8">
+    <script type="text/javascript"  src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <style type="text/css"> 
+    #divframe{ border:1px solid #999; width:100%; margin:0 auto;} 
+    .loadTitle{ background:#CCC; height:30px; text-align:center} 
+
+        table
+        {
+            padding: 0;
+            margin: 0;
+            border-collapse: collapse;
+        }
+        
+        td
+        {
+            border: 1px solid #009999;
+            padding: 6px 6px 6px 12px;
+            color: #4f6b72;
+            text-align: center;
+        }
+        
+        td button
+        {
+            font-size: 12px;
+        }
+
+    </style> 
+<script type = "text/javascript"> 
+$(function (){
+  $("#btn").click(function ()  {
+    $.getJSON("logjson.json", function (data){
+      var $jsontip = $("#jsonTip");
+ //   console.log(JSON.stringify(data));
+ //   $jsontip.html(JSON.stringify(data));
+
+      jsondata = JSON.parse(JSON.stringify(data)) 
+ 
+      var html ='<table border =1 >';
+
+      html += '<tr>'
+      html += '<td>' + 'Item' + '</td>' ;
+      html += '<td>' + 'Cmd' + '</td>' ;
+      html += '<td>' + 'Offset' + '</td>' ;
+      html += '<td>' + 'Data' + '</td>' ;
+      html += '<td>' + 'Size' + '</td>' ;
+      html += '<tr>'
+
+  
+
+      for (var j in jsondata){
+	var obj = jsondata[j];
+
+        html += '<tr>'
+        html += '<td>' + obj.item + '</td>' ;
+	html += '<td>' + obj.cmd + '</td>' ;
+	html += '<td>' + obj.offset + '</td>' ;
+	html += '<td>' + obj.data + '</td>' ;
+	html += '<td>' + obj.size + '</td>' ;
+        html += '<tr>'
+
+            
+      }
+
+      html += '</table>' ;
+      $('#jsonTip').append(html);
+      
+    }) 
+  }) 
+})
+</script> 
+</head>
+<body>
+<div id="divframe"> 
+<div class="loadTitle"> 
+<input type="button" value="GET DATA" id="btn"/> 
+</div> 
+<div id="jsonTip"> 
+</div> 
+</div> 
+</body>
+</html>
