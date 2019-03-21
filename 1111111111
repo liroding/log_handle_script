@@ -1,15 +1,17 @@
 #!/user/bin/python3
 import os
 import json
+#import new
 import re
 import string
-from time import sleep
 
+#from telnetlib import OLD_ENVIRON
+#from lib2to3.fixer_util import String
 
 class HandleLogClass:
     
     ''' log name '''
-    logname = "/log.txt"
+    logname = "/axi_scan_log.txt"
    
             
     def enter(self):
@@ -36,19 +38,19 @@ class HandleLogClass:
         print (self.numline)
        
     def show_line_data(self):
-        fd = open(self.logpath,"r") 
+        fd = open(self.logpath,"rw+") 
         for line in fd.readlines():
             print (line)
 
         fd.close()
         
     def get_key_value(self):
-        fd = open(self.logpath,"r")
+        fd = open(self.logpath,"rw+")
         
-        _addr_value = "";
-        _data_value = ""; 
-        _len_value = "";
-        _cmd  = "";
+        _addr_value = '';
+        _data_value = ''; 
+        _len_value = '';
+        _cmd  = '';
         
         for line in fd.readlines():                      
             #print line      #debug
@@ -91,22 +93,23 @@ class HandleLogClass:
                  #print "no write/read line"     #debug add
         fd.close()
  #   def scan_line_data(self):
-    JsonPacket ='{"offset": "1","data": "2" ,"size" :"3" ,"cmd" : "read", "item" : "5"}'
+    JsonPacket = {'offset': '0' ,'data': '0', 'size' : '0' ,'cmd' : '0','item' : 'invaild'}
     
     def json_handle(self,offset,data,size,cmd,item):
                 
-         template = {"offset": offset,"data": data ,"size" :size ,"cmd" : cmd, "item" : item}
-         
-        # print str(template)+ self.JsonPacket
-         #print type(str(template))
+         template = {'offset': offset,'data': data ,'size' :size ,'cmd' : cmd, 'item' : item}
    
-         self.JsonPacket = self.JsonPacket + ','+ json.dumps(template)
-         
+         self.JsonPacket = self.JsonPacket ,template
                                                   
     #     list_t = json.loads(json.dumps(eval(handle_string),indent=32))  #json to list
     def record_number_cmd(self):
-        list_t = list(eval(self.JsonPacket))  #json to list
-       
+     #   print _jsonformatdata    # debug  out the json format string data
+     
+        handle_string = str( str(self.JsonPacket).replace('(','') ).replace(')','')   #dict to string                              
+        _jsonformatdata = json.dumps(eval(handle_string),indent=32)   #eval(handle_string)->[string to dict] 
+         
+        list_t = json.loads(json.dumps(eval(_jsonformatdata),indent=32))  #json to list 
+        
         for index in range(len(list_t)):     #for index in range(len(list_t)):
             time = 0 
             if list_t[index]['item'] == 'invaild' :
@@ -128,7 +131,18 @@ class HandleLogClass:
        
         self.record_json_format_data = json.dumps (list_t,indent=32)    #after handle the source json format data,then put the record data to record_json_format_data
         
+        print (self.record_json_format_data)
+           
+        
+        '''
+        print list_t        #debug out list data
+        
+        dict_t = list_t[1]
+        
+        print dict_t       #debug out dict data
 
+        print dict_t['size']        
+        '''     
     def jsondata_to_file(self):     #put the json data to logjson.log file
          jsonfile = open('logjson.json','w')
          jsonfile.write(self.record_json_format_data)
@@ -140,15 +154,13 @@ class HandleLogClass:
 
 Loghandle = HandleLogClass() 
 
-Loghandle.enter()
-
 Loghandle.get_key_value()
-Loghandle.record_number_cmd()
-Loghandle.jsondata_to_file()
 
-Loghandle.end()
+print Loghandle.JsonPacket
 
-sleep(2)
+#Loghandle.record_number_cmd()
+#Loghandle.jsondata_to_file()
+
 
 
 

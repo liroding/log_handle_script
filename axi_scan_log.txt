@@ -1,0 +1,3662 @@
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[0m[35m[40m[2J[01;01H[01;01H[0m[37m[40mUEFI Interactive Shell v2.2
+EDK II
+UEFI v2.60 (EDK II, 0x00010000)
+[1m[33m[40mMapping table[0m[37m[40m
+[1m[33m[40m      FS0:[0m[37m[40m [1m[37m[40mAlias(s):[0m[37m[40mHD0a65535a1:;BLK1:
+          PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x0,0xFFFF,0x0)/HD(1,MBR,0xBE1AFDFA,0x3F,0xFBFC1)
+[1m[33m[40m     BLK0:[0m[37m[40m [1m[37m[40mAlias(s):[0m[37m[40m
+          PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x0,0xFFFF,0x0)
+[1m[33m[40m     BLK2:[0m[37m[40m [1m[37m[40mAlias(s):[0m[37m[40m
+          PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x2,0xFFFF,0x0)
+[12;01HPress [1m[37m[40mESC[0m[37m[40m in 5 seconds to skip [1m[33m[40mstartup.nsh[0m[37m[40m or any other key to continue.[12;01HPress [1m[37m[40mESC[0m[37m[40m in 4 seconds to skip [1m[33m[40mstartup.nsh[0m[37m[40m or any other key to continue.[12;01HPress [1m[37m[40mESC[0m[37m[40m in 3 seconds to skip [1m[33m[40mstartup.nsh[0m[37m[40m or any other key to continue.[12;01HPress [1m[37m[40mESC[0m[37m[40m in 2 seconds to skip [1m[33m[40mstartup.nsh[0m[37m[40m or any other key to continue.
+[13;01H[1m[33m[40mShell> [0m[37m[40m[13;08H
+[14;01H[1m[33m[40mShell> [0m[37m[40m[14;08H
+[15;01H[1m[33m[40mShell> [0m[37m[40m[15;08H
+[16;01H[1m[33m[40mShell> [0m[37m[40m[16;08Hf[16;09H[16;09Hs[16;10H[16;10H0[16;11H[16;11H:[16;12H[16;12H
+[17;01H[1m[33m[40mFS0:\> [0m[37m[40m[17;08H
+[18;01H[1m[33m[40mFS0:\> [0m[37m[40m[18;08Hl[18;09H[18;09Hs[18;10H[18;10H
+[19;01HDirectory of: [1m[37m[40mFS0:\[0m[37m[40m
+03/15/2019  17:58             115,200  [0m[32m[40mmemory_test.efi[0m[37m[40m
+03/15/2019  09:59               1,550  NvVars
+03/15/2019  17:53             203,104  [0m[32m[40mdual_channel_interleave.efi[0m[37m[40m
+02/25/2019  15:04              90,816  [0m[32m[40mstream1.7.efi[0m[37m[40m
+03/01/2019  14:46             115,232  [0m[32m[40mmemory_test_0x3400.efi[0m[37m[40m
+02/25/2019  15:04             214,144  [0m[32m[40mshell_dram_init.efi[0m[37m[40m
+02/25/2019  15:04           1,102,512  [0m[32m[40mBOOTX64.efi[0m[37m[40m
+02/25/2019  15:04                 825  MT86.cfg
+03/15/2019  17:58             177,280  [0m[32m[40maxiapp_init_1.efi[0m[37m[40m
+03/15/2019  17:58                  97  Conf.txt
+03/15/2019  17:58             153,952  [0m[32m[40maxi_scan_reg.efi[0m[37m[40m
+03/15/2019  17:58             184,736  [0m[32m[40maxiapp_init_2.efi[0m[37m[40m
+03/15/2019  17:58             118,880  [0m[32m[40maxi_memtest_0x542230.efi[0m[37m[40m
+03/15/2019  17:58             169,312  [0m[32m[40maxiapp_TNI.efi[0m[37m[40m
+03/15/2019  17:58             169,024  [0m[32m[40maxiapp_TNI_1.efi[0m[37m[40m
+03/15/2019  17:58             168,832  [0m[32m[40maxiapp_TNI_2.efi[0m[37m[40m
+02/15/2019  19:02              22,516  code_pe.zip
+         17 File(s)   3,008,012 bytes
+          0 Dir(s)
+[25;01H[1m[33m[40mFS0:\> [0m[37m[40m[25;08Hx[25;09H[25;08H [25;08H[25;08Ha[25;09H[25;09Hx[25;10H[25;10Hi[25;11H[25;08Haxiapp_init_1.efi[25;25H[25;08Haxi_scan_reg.efi [25;24H[25;08Haxiapp_init_2.efi[25;25H[25;08Haxi_memtest_0x542230.efi[25;32H[25;08Haxiapp_TNI.efi          [25;22H[25;08Haxiapp_TNI_1.efi[25;24H[25;08Haxiapp_TNI_2.efi[25;24H[25;24H
+______________________________________
+Shell Test Tool For Dram Init 
+The App Version is 2.3
+usage:   [ DimmNum -- Initmode-- Clock -- DimmType -- DataWidth -- ECCEnable --Mirror -- CALenable -- RankInterleave -- CHDecode  
+Instance:[  1..2   --  hw/sw  --  533  --   r/u    --  x8/x16   --    y/n   --  y/n   --   y/n     --     y/n       --    A/B       ]
+CHDecode      A:A8^A9        B:A8^A9^A12^A13^A18^A19    Default:A
+BGBit0Decode  A:A[7]^A[14]   B:A[6]^A[14]               Default:A
+[25;01H[1m[33m[40mFS0:\> [0m[37m[40m[25;08Haxiapp_TNI_2.efi[25;24H[25;24H [25;25H[25;25H1[25;26H[25;26H [25;27H[25;27Hh[25;28H[25;28Hw[25;29H[25;29H [25;30H[25;30H5[25;31H[25;31H2[25;32H[25;31H [25;31H[25;31H3[25;32H[25;32H3[25;33H[25;33H [25;34H[25;34Hu[25;35H[25;35H [25;36H[25;36Hx[25;37H[25;37H8[25;38H[25;38H
+
+
+1 hw 533 u x8 (null) (null) (null) (null)
+______________________Step1 GetBasicInformation________________
+
+______________________Step2 DRAMInitTable_____________________
+
+Read Configure register offset=0x134,data=0x9D,size=1
+Write Configure register offset=0x134,data=0x9D,size=1
+ 
+Read Configure register offset=0x134,data=0x9D,size=1
+Write Configure register offset=0x134,data=0x9D,size=1
+ 
+Read Configure register offset=0x144,data=0x0,size=1
+Write Configure register offset=0x144,data=0x0,size=1
+ 
+Read Configure register offset=0x145,data=0x1D,size=1
+Write Configure register offset=0x145,data=0x1D,size=1
+ 
+Read Configure register offset=0xA6,data=0xB0,size=1
+Write Configure register offset=0xA6,data=0xB0,size=1
+ 
+Read Configure register offset=0x13F,data=0x42,size=1
+Write Configure register offset=0x13F,data=0xA2,size=1
+ 
+Read Configure register offset=0x13F,data=0x31,size=1
+Write Configure register offset=0x13F,data=0x36,size=1
+ 
+Read Configure register offset=0x14E,data=0xD0,size=1
+Write Configure register offset=0x14E,data=0xD0,size=1
+ 
+Read Configure register offset=0x136,data=0x44,size=1
+Write Configure register offset=0x136,data=0x44,size=1
+ 
+Read Configure register offset=0x136,data=0x44,size=1
+Write Configure register offset=0x136,data=0x44,size=1
+ 
+Read Configure register offset=0x162,data=0x0,size=1
+Write Configure register offset=0x162,data=0x0,size=1
+ 
+Read Configure register offset=0x163,data=0x80,size=1
+Write Configure register offset=0x163,data=0x80,size=1
+ 
+Read Configure register offset=0x16D,data=0x80,size=1
+Write Configure register offset=0x16D,data=0x80,size=1
+ 
+Read Configure register offset=0x181,data=0x88,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x520,data=0xFF,size=1
+Write Configure register offset=0x520,data=0xFF,size=1
+ 
+Read Configure register offset=0x46F,data=0xFF,size=1
+Write Configure register offset=0x46F,data=0xFF,size=1
+ 
+Read Configure register offset=0x88,data=0x1,size=1
+Write Configure register offset=0x88,data=0x1,size=1
+ 
+Read Configure register offset=0x89,data=0x0,size=1
+Write Configure register offset=0x89,data=0x2,size=1
+ 
+Read Configure register offset=0x8A,data=0x0,size=1
+Write Configure register offset=0x8A,data=0x3,size=1
+ 
+Read Configure register offset=0x8B,data=0x0,size=1
+Write Configure register offset=0x8B,data=0x4,size=1
+ 
+Read Configure register offset=0x8C,data=0x0,size=1
+Write Configure register offset=0x8C,data=0x5,size=1
+ 
+Read Configure register offset=0x8D,data=0x0,size=1
+Write Configure register offset=0x8D,data=0x6,size=1
+ 
+Read Configure register offset=0x8E,data=0x0,size=1
+Write Configure register offset=0x8E,data=0x7,size=1
+ 
+Read Configure register offset=0x8F,data=0x0,size=1
+Write Configure register offset=0x8F,data=0x8,size=1
+ 
+Read Configure register offset=0x90,data=0x0,size=1
+Write Configure register offset=0x90,data=0x0,size=1
+ 
+Read Configure register offset=0x91,data=0x0,size=1
+Write Configure register offset=0x91,data=0x1,size=1
+ 
+Read Configure register offset=0x92,data=0x0,size=1
+Write Configure register offset=0x92,data=0x2,size=1
+ 
+Read Configure register offset=0x93,data=0x0,size=1
+Write Configure register offset=0x93,data=0x3,size=1
+ 
+Read Configure register offset=0x94,data=0x0,size=1
+Write Configure register offset=0x94,data=0x4,size=1
+ 
+Read Configure register offset=0x95,data=0x0,size=1
+Write Configure register offset=0x95,data=0x5,size=1
+ 
+Read Configure register offset=0x96,data=0x0,size=1
+Write Configure register offset=0x96,data=0x6,size=1
+ 
+Read Configure register offset=0x97,data=0x0,size=1
+Write Configure register offset=0x97,data=0x7,size=1
+ 
+Read Configure register offset=0xA4,data=0xB4,size=1
+Write Configure register offset=0xA4,data=0xB4,size=1
+ 
+Read Configure register offset=0xA8,data=0x11,size=1
+Write Configure register offset=0xA8,data=0x11,size=1
+ 
+Read Configure register offset=0xA9,data=0x81,size=1
+Write Configure register offset=0xA9,data=0x81,size=1
+ 
+Read Configure register offset=0xF,data=0xFF,size=1
+Write Configure register offset=0xF,data=0x9F,size=1
+ 
+Read Configure register offset=0x66,data=0x0,size=1
+Write Configure register offset=0x66,data=0x3,size=1
+ 
+Read Configure register offset=0xD,data=0xFF,size=1
+Write Configure register offset=0xD,data=0xFF,size=1
+ 
+Read Configure register offset=0x16D,data=0x80,size=1
+Write Configure register offset=0x16D,data=0x80,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+_______________________Step3 SetDramFeature__________________
+
+Read Configure register offset=0x172,data=0x6,size=1
+Write Configure register offset=0x172,data=0x6,size=1
+ 
+_______________________Step4 SIValueProgramming______________
+
+Read Configure register offset=0x16A,data=0xDC4,size=2
+Write Configure register offset=0x16A,data=0xDCC,size=2
+ 
+Read Configure register offset=0x16B,data=0x100D,size=2
+Write Configure register offset=0x16B,data=0x108D,size=2
+ 
+Read Configure register offset=0x16B,data=0x108D,size=2
+Write Configure register offset=0x16B,data=0x10AD,size=2
+ 
+Read Configure register offset=0x16B,data=0x10AD,size=2
+Write Configure register offset=0x16B,data=0x10AE,size=2
+ 
+Read Configure register offset=0x233,data=0x0,size=2
+Write Configure register offset=0x233,data=0x80,size=2
+ 
+Read Configure register offset=0x233,data=0x80,size=2
+Write Configure register offset=0x233,data=0xA0,size=2
+ 
+Read Configure register offset=0xEA0,data=0x0,size=2
+Write Configure register offset=0xEA0,data=0x0,size=2
+ 
+Read Configure register offset=0xB90,data=0x0,size=2
+Write Configure register offset=0xB90,data=0x88,size=2
+ 
+Read Configure register offset=0xB91,data=0x0,size=2
+Write Configure register offset=0xB91,data=0x88,size=2
+ 
+Read Configure register offset=0xB92,data=0x0,size=2
+Write Configure register offset=0xB92,data=0x88,size=2
+ 
+Read Configure register offset=0xB93,data=0x0,size=2
+Write Configure register offset=0xB93,data=0x88,size=2
+ 
+Read Configure register offset=0xB94,data=0x0,size=2
+Write Configure register offset=0xB94,data=0x88,size=2
+ 
+Read Configure register offset=0xB95,data=0x0,size=2
+Write Configure register offset=0xB95,data=0x88,size=2
+ 
+Read Configure register offset=0xB96,data=0x0,size=2
+Write Configure register offset=0xB96,data=0x88,size=2
+ 
+Read Configure register offset=0xB97,data=0x0,size=2
+Write Configure register offset=0xB97,data=0x88,size=2
+ 
+Read Configure register offset=0xB98,data=0x0,size=2
+Write Configure register offset=0xB98,data=0x88,size=2
+ 
+Read Configure register offset=0xB99,data=0x0,size=2
+Write Configure register offset=0xB99,data=0x88,size=2
+ 
+Read Configure register offset=0xB9A,data=0x0,size=2
+Write Configure register offset=0xB9A,data=0x88,size=2
+ 
+Read Configure register offset=0xB9B,data=0x0,size=2
+Write Configure register offset=0xB9B,data=0x88,size=2
+ 
+Read Configure register offset=0xB9C,data=0x0,size=2
+Write Configure register offset=0xB9C,data=0x88,size=2
+ 
+Read Configure register offset=0xB9D,data=0x0,size=2
+Write Configure register offset=0xB9D,data=0x88,size=2
+ 
+Read Configure register offset=0xB9E,data=0x0,size=2
+Write Configure register offset=0xB9E,data=0x88,size=2
+ 
+Read Configure register offset=0xB9F,data=0x0,size=2
+Write Configure register offset=0xB9F,data=0x88,size=2
+ 
+Read Configure register offset=0xBA0,data=0x0,size=2
+Write Configure register offset=0xBA0,data=0x88,size=2
+ 
+Read Configure register offset=0xBA1,data=0x0,size=2
+Write Configure register offset=0xBA1,data=0x88,size=2
+ 
+Read Configure register offset=0xBA2,data=0x0,size=2
+Write Configure register offset=0xBA2,data=0x88,size=2
+ 
+Read Configure register offset=0xBA3,data=0x0,size=2
+Write Configure register offset=0xBA3,data=0x88,size=2
+ 
+Read Configure register offset=0xBA4,data=0x0,size=2
+Write Configure register offset=0xBA4,data=0x88,size=2
+ 
+Read Configure register offset=0xBA5,data=0x0,size=2
+Write Configure register offset=0xBA5,data=0x88,size=2
+ 
+Read Configure register offset=0xBA6,data=0x0,size=2
+Write Configure register offset=0xBA6,data=0x88,size=2
+ 
+Read Configure register offset=0xBA7,data=0x0,size=2
+Write Configure register offset=0xBA7,data=0x88,size=2
+ 
+Read Configure register offset=0xBA8,data=0x0,size=2
+Write Configure register offset=0xBA8,data=0x88,size=2
+ 
+Read Configure register offset=0xBA9,data=0x0,size=2
+Write Configure register offset=0xBA9,data=0x88,size=2
+ 
+Read Configure register offset=0xBAA,data=0x0,size=2
+Write Configure register offset=0xBAA,data=0x88,size=2
+ 
+Read Configure register offset=0xBAB,data=0x0,size=2
+Write Configure register offset=0xBAB,data=0x88,size=2
+ 
+Read Configure register offset=0xBAC,data=0x0,size=2
+Write Configure register offset=0xBAC,data=0x88,size=2
+ 
+Read Configure register offset=0xBAD,data=0x0,size=2
+Write Configure register offset=0xBAD,data=0x88,size=2
+ 
+Read Configure register offset=0xBAE,data=0x0,size=2
+Write Configure register offset=0xBAE,data=0x88,size=2
+ 
+Read Configure register offset=0xBAF,data=0x0,size=2
+Write Configure register offset=0xBAF,data=0x88,size=2
+ 
+Read Configure register offset=0xBB0,data=0x0,size=2
+Write Configure register offset=0xBB0,data=0x88,size=2
+ 
+Read Configure register offset=0xBB1,data=0x0,size=2
+Write Configure register offset=0xBB1,data=0x88,size=2
+ 
+Read Configure register offset=0xBB2,data=0x0,size=2
+Write Configure register offset=0xBB2,data=0x88,size=2
+ 
+Read Configure register offset=0xBB3,data=0x0,size=2
+Write Configure register offset=0xBB3,data=0x88,size=2
+ 
+Read Configure register offset=0xBD8,data=0x0,size=2
+Write Configure register offset=0xBD8,data=0x88,size=2
+ 
+Read Configure register offset=0xBD9,data=0x0,size=2
+Write Configure register offset=0xBD9,data=0x88,size=2
+ 
+Read Configure register offset=0xBDA,data=0x0,size=2
+Write Configure register offset=0xBDA,data=0x88,size=2
+ 
+Read Configure register offset=0xBDB,data=0x0,size=2
+Write Configure register offset=0xBDB,data=0x88,size=2
+ 
+Read Configure register offset=0xBDC,data=0x0,size=2
+Write Configure register offset=0xBDC,data=0x88,size=2
+ 
+Read Configure register offset=0xBDD,data=0x0,size=2
+Write Configure register offset=0xBDD,data=0x88,size=2
+ 
+Read Configure register offset=0xBDE,data=0x0,size=2
+Write Configure register offset=0xBDE,data=0x88,size=2
+ 
+Read Configure register offset=0xBDF,data=0x0,size=2
+Write Configure register offset=0xBDF,data=0x88,size=2
+ 
+Read Configure register offset=0xBE0,data=0x0,size=2
+Write Configure register offset=0xBE0,data=0x88,size=2
+ 
+Read Configure register offset=0xBE1,data=0x0,size=2
+Write Configure register offset=0xBE1,data=0x88,size=2
+ 
+Read Configure register offset=0xBE2,data=0x0,size=2
+Write Configure register offset=0xBE2,data=0x88,size=2
+ 
+Read Configure register offset=0xBE3,data=0x0,size=2
+Write Configure register offset=0xBE3,data=0x88,size=2
+ 
+Read Configure register offset=0xBE4,data=0x0,size=2
+Write Configure register offset=0xBE4,data=0x88,size=2
+ 
+Read Configure register offset=0xBE5,data=0x0,size=2
+Write Configure register offset=0xBE5,data=0x88,size=2
+ 
+Read Configure register offset=0xBE6,data=0x31B2,size=2
+Write Configure register offset=0xBE6,data=0x3188,size=2
+ 
+Read Configure register offset=0xBE7,data=0x0,size=2
+Write Configure register offset=0xBE7,data=0x88,size=2
+ 
+Read Configure register offset=0xBE8,data=0x0,size=2
+Write Configure register offset=0xBE8,data=0x88,size=2
+ 
+Read Configure register offset=0xBE9,data=0x0,size=2
+Write Configure register offset=0xBE9,data=0x88,size=2
+ 
+Read Configure register offset=0xBEA,data=0x0,size=2
+Write Configure register offset=0xBEA,data=0x88,size=2
+ 
+Read Configure register offset=0xBEB,data=0x0,size=2
+Write Configure register offset=0xBEB,data=0x88,size=2
+ 
+Read Configure register offset=0xBEC,data=0x0,size=2
+Write Configure register offset=0xBEC,data=0x88,size=2
+ 
+Read Configure register offset=0xBED,data=0x0,size=2
+Write Configure register offset=0xBED,data=0x88,size=2
+ 
+Read Configure register offset=0xBEE,data=0x0,size=2
+Write Configure register offset=0xBEE,data=0x88,size=2
+ 
+Read Configure register offset=0xBEF,data=0x0,size=2
+Write Configure register offset=0xBEF,data=0x88,size=2
+ 
+Read Configure register offset=0xBF0,data=0x0,size=2
+Write Configure register offset=0xBF0,data=0x88,size=2
+ 
+Read Configure register offset=0xBF1,data=0x0,size=2
+Write Configure register offset=0xBF1,data=0x88,size=2
+ 
+Read Configure register offset=0xBF2,data=0x0,size=2
+Write Configure register offset=0xBF2,data=0x88,size=2
+ 
+Read Configure register offset=0xBF3,data=0x0,size=2
+Write Configure register offset=0xBF3,data=0x88,size=2
+ 
+Read Configure register offset=0xBF4,data=0x0,size=2
+Write Configure register offset=0xBF4,data=0x88,size=2
+ 
+Read Configure register offset=0xBF5,data=0x0,size=2
+Write Configure register offset=0xBF5,data=0x88,size=2
+ 
+Read Configure register offset=0xBF6,data=0x0,size=2
+Write Configure register offset=0xBF6,data=0x88,size=2
+ 
+Read Configure register offset=0xBF7,data=0x0,size=2
+Write Configure register offset=0xBF7,data=0x88,size=2
+ 
+Read Configure register offset=0xBF8,data=0x0,size=2
+Write Configure register offset=0xBF8,data=0x88,size=2
+ 
+Read Configure register offset=0xBF9,data=0x0,size=2
+Write Configure register offset=0xBF9,data=0x88,size=2
+ 
+Read Configure register offset=0xBFA,data=0x0,size=2
+Write Configure register offset=0xBFA,data=0x88,size=2
+ 
+Read Configure register offset=0xBFB,data=0x0,size=2
+Write Configure register offset=0xBFB,data=0x88,size=2
+ 
+Read Configure register offset=0xB00,data=0x0,size=2
+Write Configure register offset=0xB00,data=0xAA,size=2
+ 
+Read Configure register offset=0xB01,data=0x0,size=2
+Write Configure register offset=0xB01,data=0xAA,size=2
+ 
+Read Configure register offset=0xB02,data=0x0,size=2
+Write Configure register offset=0xB02,data=0xAA,size=2
+ 
+Read Configure register offset=0xB03,data=0x0,size=2
+Write Configure register offset=0xB03,data=0xAA,size=2
+ 
+Read Configure register offset=0xB04,data=0x1D17,size=2
+Write Configure register offset=0xB04,data=0x1DAA,size=2
+ 
+Read Configure register offset=0xB05,data=0x0,size=2
+Write Configure register offset=0xB05,data=0xAA,size=2
+ 
+Read Configure register offset=0xB06,data=0x0,size=2
+Write Configure register offset=0xB06,data=0xAA,size=2
+ 
+Read Configure register offset=0xB07,data=0x0,size=2
+Write Configure register offset=0xB07,data=0xAA,size=2
+ 
+Read Configure register offset=0xB08,data=0x0,size=2
+Write Configure register offset=0xB08,data=0xAA,size=2
+ 
+Read Configure register offset=0xB09,data=0x0,size=2
+Write Configure register offset=0xB09,data=0xAA,size=2
+ 
+Read Configure register offset=0xB0A,data=0x0,size=2
+Write Configure register offset=0xB0A,data=0xAA,size=2
+ 
+Read Configure register offset=0xB0B,data=0x0,size=2
+Write Configure register offset=0xB0B,data=0xAA,size=2
+ 
+Read Configure register offset=0xB0C,data=0x0,size=2
+Write Configure register offset=0xB0C,data=0xAA,size=2
+ 
+Read Configure register offset=0xB0D,data=0x0,size=2
+Write Configure register offset=0xB0D,data=0xAA,size=2
+ 
+Read Configure register offset=0xB0E,data=0x0,size=2
+Write Configure register offset=0xB0E,data=0xAA,size=2
+ 
+Read Configure register offset=0xB0F,data=0x0,size=2
+Write Configure register offset=0xB0F,data=0xAA,size=2
+ 
+Read Configure register offset=0xB10,data=0x0,size=2
+Write Configure register offset=0xB10,data=0xAA,size=2
+ 
+Read Configure register offset=0xB11,data=0x0,size=2
+Write Configure register offset=0xB11,data=0xAA,size=2
+ 
+Read Configure register offset=0xB12,data=0x0,size=2
+Write Configure register offset=0xB12,data=0xAA,size=2
+ 
+Read Configure register offset=0xB13,data=0x0,size=2
+Write Configure register offset=0xB13,data=0xAA,size=2
+ 
+Read Configure register offset=0xB14,data=0x0,size=2
+Write Configure register offset=0xB14,data=0xAA,size=2
+ 
+Read Configure register offset=0xB15,data=0x0,size=2
+Write Configure register offset=0xB15,data=0xAA,size=2
+ 
+Read Configure register offset=0xB16,data=0x0,size=2
+Write Configure register offset=0xB16,data=0xAA,size=2
+ 
+Read Configure register offset=0xB17,data=0x0,size=2
+Write Configure register offset=0xB17,data=0xAA,size=2
+ 
+Read Configure register offset=0xB18,data=0x0,size=2
+Write Configure register offset=0xB18,data=0xAA,size=2
+ 
+Read Configure register offset=0xB19,data=0x0,size=2
+Write Configure register offset=0xB19,data=0xAA,size=2
+ 
+Read Configure register offset=0xB1A,data=0x0,size=2
+Write Configure register offset=0xB1A,data=0xAA,size=2
+ 
+Read Configure register offset=0xB1B,data=0x0,size=2
+Write Configure register offset=0xB1B,data=0xAA,size=2
+ 
+Read Configure register offset=0xB1C,data=0x0,size=2
+Write Configure register offset=0xB1C,data=0xAA,size=2
+ 
+Read Configure register offset=0xB1D,data=0x0,size=2
+Write Configure register offset=0xB1D,data=0xAA,size=2
+ 
+Read Configure register offset=0xB1E,data=0x0,size=2
+Write Configure register offset=0xB1E,data=0xAA,size=2
+ 
+Read Configure register offset=0xB1F,data=0x31,size=2
+Write Configure register offset=0xB1F,data=0xAA,size=2
+ 
+Read Configure register offset=0xB20,data=0x0,size=2
+Write Configure register offset=0xB20,data=0xAA,size=2
+ 
+Read Configure register offset=0xB21,data=0x0,size=2
+Write Configure register offset=0xB21,data=0xAA,size=2
+ 
+Read Configure register offset=0xB22,data=0x0,size=2
+Write Configure register offset=0xB22,data=0xAA,size=2
+ 
+Read Configure register offset=0xB23,data=0x0,size=2
+Write Configure register offset=0xB23,data=0xAA,size=2
+ 
+Read Configure register offset=0xB48,data=0x0,size=2
+Write Configure register offset=0xB48,data=0xAA,size=2
+ 
+Read Configure register offset=0xB49,data=0x0,size=2
+Write Configure register offset=0xB49,data=0xAA,size=2
+ 
+Read Configure register offset=0xB4A,data=0x0,size=2
+Write Configure register offset=0xB4A,data=0xAA,size=2
+ 
+Read Configure register offset=0xB4B,data=0x0,size=2
+Write Configure register offset=0xB4B,data=0xAA,size=2
+ 
+Read Configure register offset=0xB4C,data=0x0,size=2
+Write Configure register offset=0xB4C,data=0xAA,size=2
+ 
+Read Configure register offset=0xB4D,data=0x0,size=2
+Write Configure register offset=0xB4D,data=0xAA,size=2
+ 
+Read Configure register offset=0xB4E,data=0x0,size=2
+Write Configure register offset=0xB4E,data=0xAA,size=2
+ 
+Read Configure register offset=0xB4F,data=0x0,size=2
+Write Configure register offset=0xB4F,data=0xAA,size=2
+ 
+Read Configure register offset=0xB50,data=0x0,size=2
+Write Configure register offset=0xB50,data=0xAA,size=2
+ 
+Read Configure register offset=0xB51,data=0x0,size=2
+Write Configure register offset=0xB51,data=0xAA,size=2
+ 
+Read Configure register offset=0xB52,data=0x0,size=2
+Write Configure register offset=0xB52,data=0xAA,size=2
+ 
+Read Configure register offset=0xB53,data=0x0,size=2
+Write Configure register offset=0xB53,data=0xAA,size=2
+ 
+Read Configure register offset=0xB54,data=0x0,size=2
+Write Configure register offset=0xB54,data=0xAA,size=2
+ 
+Read Configure register offset=0xB55,data=0x0,size=2
+Write Configure register offset=0xB55,data=0xAA,size=2
+ 
+Read Configure register offset=0xB56,data=0x0,size=2
+Write Configure register offset=0xB56,data=0xAA,size=2
+ 
+Read Configure register offset=0xB57,data=0x0,size=2
+Write Configure register offset=0xB57,data=0xAA,size=2
+ 
+Read Configure register offset=0xB58,data=0x0,size=2
+Write Configure register offset=0xB58,data=0xAA,size=2
+ 
+Read Configure register offset=0xB59,data=0x0,size=2
+Write Configure register offset=0xB59,data=0xAA,size=2
+ 
+Read Configure register offset=0xB5A,data=0x0,size=2
+Write Configure register offset=0xB5A,data=0xAA,size=2
+ 
+Read Configure register offset=0xB5B,data=0x0,size=2
+Write Configure register offset=0xB5B,data=0xAA,size=2
+ 
+Read Configure register offset=0xB5C,data=0x0,size=2
+Write Configure register offset=0xB5C,data=0xAA,size=2
+ 
+Read Configure register offset=0xB5D,data=0x0,size=2
+Write Configure register offset=0xB5D,data=0xAA,size=2
+ 
+Read Configure register offset=0xB5E,data=0x0,size=2
+Write Configure register offset=0xB5E,data=0xAA,size=2
+ 
+Read Configure register offset=0xB5F,data=0x0,size=2
+Write Configure register offset=0xB5F,data=0xAA,size=2
+ 
+Read Configure register offset=0xB60,data=0x0,size=2
+Write Configure register offset=0xB60,data=0xAA,size=2
+ 
+Read Configure register offset=0xB61,data=0x0,size=2
+Write Configure register offset=0xB61,data=0xAA,size=2
+ 
+Read Configure register offset=0xB62,data=0x0,size=2
+Write Configure register offset=0xB62,data=0xAA,size=2
+ 
+Read Configure register offset=0xB63,data=0x0,size=2
+Write Configure register offset=0xB63,data=0xAA,size=2
+ 
+Read Configure register offset=0xB64,data=0x0,size=2
+Write Configure register offset=0xB64,data=0xAA,size=2
+ 
+Read Configure register offset=0xB65,data=0x0,size=2
+Write Configure register offset=0xB65,data=0xAA,size=2
+ 
+Read Configure register offset=0xB66,data=0x0,size=2
+Write Configure register offset=0xB66,data=0xAA,size=2
+ 
+Read Configure register offset=0xB67,data=0x0,size=2
+Write Configure register offset=0xB67,data=0xAA,size=2
+ 
+Read Configure register offset=0xB68,data=0x0,size=2
+Write Configure register offset=0xB68,data=0xAA,size=2
+ 
+Read Configure register offset=0xB69,data=0x0,size=2
+Write Configure register offset=0xB69,data=0xAA,size=2
+ 
+Read Configure register offset=0xB6A,data=0x0,size=2
+Write Configure register offset=0xB6A,data=0xAA,size=2
+ 
+Read Configure register offset=0xB6B,data=0x0,size=2
+Write Configure register offset=0xB6B,data=0xAA,size=2
+ 
+Read Configure register offset=0xC28,data=0x0,size=2
+Write Configure register offset=0xC28,data=0x88,size=2
+ 
+Read Configure register offset=0xC2C,data=0x0,size=2
+Write Configure register offset=0xC2C,data=0x88,size=2
+ 
+Read Configure register offset=0xC30,data=0x0,size=2
+Write Configure register offset=0xC30,data=0x88,size=2
+ 
+Read Configure register offset=0xC34,data=0x0,size=2
+Write Configure register offset=0xC34,data=0x88,size=2
+ 
+Read Configure register offset=0xC29,data=0x0,size=2
+Write Configure register offset=0xC29,data=0x88,size=2
+ 
+Read Configure register offset=0xC2D,data=0x0,size=2
+Write Configure register offset=0xC2D,data=0x88,size=2
+ 
+Read Configure register offset=0xC31,data=0x0,size=2
+Write Configure register offset=0xC31,data=0x88,size=2
+ 
+Read Configure register offset=0xC35,data=0x0,size=2
+Write Configure register offset=0xC35,data=0x88,size=2
+ 
+Read Configure register offset=0xC38,data=0x0,size=2
+Write Configure register offset=0xC38,data=0x88,size=2
+ 
+Read Configure register offset=0xC39,data=0x0,size=2
+Write Configure register offset=0xC39,data=0x88,size=2
+ 
+Read Configure register offset=0xC3A,data=0x0,size=2
+Write Configure register offset=0xC3A,data=0x88,size=2
+ 
+Read Configure register offset=0xC3B,data=0x0,size=2
+Write Configure register offset=0xC3B,data=0x88,size=2
+ 
+Read Configure register offset=0xC20,data=0x0,size=2
+Write Configure register offset=0xC20,data=0x88,size=2
+ 
+Read Configure register offset=0xC21,data=0x0,size=2
+Write Configure register offset=0xC21,data=0x88,size=2
+ 
+Read Configure register offset=0xC22,data=0x0,size=2
+Write Configure register offset=0xC22,data=0x88,size=2
+ 
+Read Configure register offset=0xC23,data=0x0,size=2
+Write Configure register offset=0xC23,data=0x88,size=2
+ 
+Read Configure register offset=0xC40,data=0x0,size=2
+Write Configure register offset=0xC40,data=0x88,size=2
+ 
+Read Configure register offset=0xC41,data=0x0,size=2
+Write Configure register offset=0xC41,data=0x88,size=2
+ 
+Read Configure register offset=0xC42,data=0x0,size=2
+Write Configure register offset=0xC42,data=0x88,size=2
+ 
+Read Configure register offset=0xC43,data=0x0,size=2
+Write Configure register offset=0xC43,data=0x88,size=2
+ 
+Read Configure register offset=0xC48,data=0x0,size=2
+Write Configure register offset=0xC48,data=0x0,size=2
+ 
+Read Configure register offset=0xC49,data=0x0,size=2
+Write Configure register offset=0xC49,data=0x0,size=2
+ 
+Read Configure register offset=0xC4A,data=0x0,size=2
+Write Configure register offset=0xC4A,data=0x0,size=2
+ 
+Read Configure register offset=0xC4B,data=0x0,size=2
+Write Configure register offset=0xC4B,data=0x0,size=2
+ 
+Read Configure register offset=0xC4C,data=0x0,size=2
+Write Configure register offset=0xC4C,data=0x0,size=2
+ 
+Read Configure register offset=0xC4D,data=0x0,size=2
+Write Configure register offset=0xC4D,data=0x0,size=2
+ 
+Read Configure register offset=0xC4E,data=0x0,size=2
+Write Configure register offset=0xC4E,data=0x0,size=2
+ 
+Read Configure register offset=0xC4F,data=0x0,size=2
+Write Configure register offset=0xC4F,data=0x0,size=2
+ 
+Read Configure register offset=0xC50,data=0x0,size=2
+Write Configure register offset=0xC50,data=0x0,size=2
+ 
+Read Configure register offset=0xC51,data=0x0,size=2
+Write Configure register offset=0xC51,data=0x0,size=2
+ 
+Read Configure register offset=0xC52,data=0x0,size=2
+Write Configure register offset=0xC52,data=0x0,size=2
+ 
+Read Configure register offset=0xC53,data=0x0,size=2
+Write Configure register offset=0xC53,data=0x0,size=2
+ 
+Read Configure register offset=0xC54,data=0x0,size=2
+Write Configure register offset=0xC54,data=0x0,size=2
+ 
+Read Configure register offset=0xC55,data=0x0,size=2
+Write Configure register offset=0xC55,data=0x0,size=2
+ 
+Read Configure register offset=0xC56,data=0x0,size=2
+Write Configure register offset=0xC56,data=0x0,size=2
+ 
+Read Configure register offset=0xC57,data=0x0,size=2
+Write Configure register offset=0xC57,data=0x0,size=2
+ 
+Read Configure register offset=0xC58,data=0x0,size=2
+Write Configure register offset=0xC58,data=0x0,size=2
+ 
+Read Configure register offset=0xC59,data=0x0,size=2
+Write Configure register offset=0xC59,data=0x0,size=2
+ 
+Read Configure register offset=0xC5A,data=0x0,size=2
+Write Configure register offset=0xC5A,data=0x0,size=2
+ 
+Read Configure register offset=0xC5B,data=0x0,size=2
+Write Configure register offset=0xC5B,data=0x0,size=2
+ 
+Read Configure register offset=0xC5C,data=0x0,size=2
+Write Configure register offset=0xC5C,data=0x0,size=2
+ 
+Read Configure register offset=0xC5D,data=0x0,size=2
+Write Configure register offset=0xC5D,data=0x0,size=2
+ 
+Read Configure register offset=0xC5E,data=0x0,size=2
+Write Configure register offset=0xC5E,data=0x0,size=2
+ 
+Read Configure register offset=0xC5F,data=0x0,size=2
+Write Configure register offset=0xC5F,data=0x0,size=2
+ 
+Read Configure register offset=0xC60,data=0x0,size=2
+Write Configure register offset=0xC60,data=0x0,size=2
+ 
+Read Configure register offset=0xC61,data=0x0,size=2
+Write Configure register offset=0xC61,data=0x0,size=2
+ 
+Read Configure register offset=0xC62,data=0x0,size=2
+Write Configure register offset=0xC62,data=0x0,size=2
+ 
+Read Configure register offset=0xC63,data=0x0,size=2
+Write Configure register offset=0xC63,data=0x0,size=2
+ 
+Read Configure register offset=0xC64,data=0x0,size=2
+Write Configure register offset=0xC64,data=0x0,size=2
+ 
+Read Configure register offset=0xC65,data=0x0,size=2
+Write Configure register offset=0xC65,data=0x0,size=2
+ 
+Read Configure register offset=0xC66,data=0x0,size=2
+Write Configure register offset=0xC66,data=0x0,size=2
+ 
+Read Configure register offset=0xC67,data=0x0,size=2
+Write Configure register offset=0xC67,data=0x0,size=2
+ 
+Read Configure register offset=0xC68,data=0x0,size=2
+Write Configure register offset=0xC68,data=0x0,size=2
+ 
+Read Configure register offset=0xC69,data=0x0,size=2
+Write Configure register offset=0xC69,data=0x0,size=2
+ 
+Read Configure register offset=0xC6A,data=0x0,size=2
+Write Configure register offset=0xC6A,data=0x0,size=2
+ 
+Read Configure register offset=0xC6B,data=0x0,size=2
+Write Configure register offset=0xC6B,data=0x0,size=2
+ 
+Read Configure register offset=0xC48,data=0x0,size=2
+Write Configure register offset=0xC48,data=0x0,size=2
+ 
+Read Configure register offset=0xC49,data=0x0,size=2
+Write Configure register offset=0xC49,data=0x0,size=2
+ 
+Read Configure register offset=0xC4A,data=0x0,size=2
+Write Configure register offset=0xC4A,data=0x0,size=2
+ 
+Read Configure register offset=0xC4B,data=0x0,size=2
+Write Configure register offset=0xC4B,data=0x0,size=2
+ 
+Read Configure register offset=0xC4C,data=0x0,size=2
+Write Configure register offset=0xC4C,data=0x0,size=2
+ 
+Read Configure register offset=0xC4D,data=0x0,size=2
+Write Configure register offset=0xC4D,data=0x0,size=2
+ 
+Read Configure register offset=0xC4E,data=0x0,size=2
+Write Configure register offset=0xC4E,data=0x0,size=2
+ 
+Read Configure register offset=0xC4F,data=0x0,size=2
+Write Configure register offset=0xC4F,data=0x0,size=2
+ 
+Read Configure register offset=0xC50,data=0x0,size=2
+Write Configure register offset=0xC50,data=0x0,size=2
+ 
+Read Configure register offset=0xC51,data=0x0,size=2
+Write Configure register offset=0xC51,data=0x0,size=2
+ 
+Read Configure register offset=0xC52,data=0x0,size=2
+Write Configure register offset=0xC52,data=0x0,size=2
+ 
+Read Configure register offset=0xC53,data=0x0,size=2
+Write Configure register offset=0xC53,data=0x0,size=2
+ 
+Read Configure register offset=0xC54,data=0x0,size=2
+Write Configure register offset=0xC54,data=0x0,size=2
+ 
+Read Configure register offset=0xC55,data=0x1D,size=2
+Write Configure register offset=0xC55,data=0x10,size=2
+ 
+Read Configure register offset=0xC56,data=0x0,size=2
+Write Configure register offset=0xC56,data=0x0,size=2
+ 
+Read Configure register offset=0xC57,data=0x0,size=2
+Write Configure register offset=0xC57,data=0x0,size=2
+ 
+Read Configure register offset=0xC58,data=0x0,size=2
+Write Configure register offset=0xC58,data=0x0,size=2
+ 
+Read Configure register offset=0xC59,data=0x0,size=2
+Write Configure register offset=0xC59,data=0x0,size=2
+ 
+Read Configure register offset=0xC5A,data=0x0,size=2
+Write Configure register offset=0xC5A,data=0x0,size=2
+ 
+Read Configure register offset=0xC5B,data=0x0,size=2
+Write Configure register offset=0xC5B,data=0x0,size=2
+ 
+Read Configure register offset=0xC5C,data=0x0,size=2
+Write Configure register offset=0xC5C,data=0x0,size=2
+ 
+Read Configure register offset=0xC5D,data=0x0,size=2
+Write Configure register offset=0xC5D,data=0x0,size=2
+ 
+Read Configure register offset=0xC5E,data=0x0,size=2
+Write Configure register offset=0xC5E,data=0x0,size=2
+ 
+Read Configure register offset=0xC5F,data=0x0,size=2
+Write Configure register offset=0xC5F,data=0x0,size=2
+ 
+Read Configure register offset=0xC60,data=0x0,size=2
+Write Configure register offset=0xC60,data=0x0,size=2
+ 
+Read Configure register offset=0xC61,data=0x0,size=2
+Write Configure register offset=0xC61,data=0x0,size=2
+ 
+Read Configure register offset=0xC62,data=0x0,size=2
+Write Configure register offset=0xC62,data=0x0,size=2
+ 
+Read Configure register offset=0xC63,data=0x0,size=2
+Write Configure register offset=0xC63,data=0x0,size=2
+ 
+Read Configure register offset=0xC64,data=0x0,size=2
+Write Configure register offset=0xC64,data=0x0,size=2
+ 
+Read Configure register offset=0xC65,data=0x0,size=2
+Write Configure register offset=0xC65,data=0x0,size=2
+ 
+Read Configure register offset=0xC66,data=0x0,size=2
+Write Configure register offset=0xC66,data=0x0,size=2
+ 
+Read Configure register offset=0xC67,data=0x0,size=2
+Write Configure register offset=0xC67,data=0x0,size=2
+ 
+Read Configure register offset=0xC68,data=0x0,size=2
+Write Configure register offset=0xC68,data=0x0,size=2
+ 
+Read Configure register offset=0xC69,data=0x0,size=2
+Write Configure register offset=0xC69,data=0x0,size=2
+ 
+Read Configure register offset=0xC6A,data=0x0,size=2
+Write Configure register offset=0xC6A,data=0x0,size=2
+ 
+Read Configure register offset=0xC6B,data=0x0,size=2
+Write Configure register offset=0xC6B,data=0x0,size=2
+ 
+Read Configure register offset=0xC90,data=0x0,size=2
+Write Configure register offset=0xC90,data=0xFF,size=2
+ 
+Read Configure register offset=0xC91,data=0x0,size=2
+Write Configure register offset=0xC91,data=0xFF,size=2
+ 
+Read Configure register offset=0xC92,data=0x0,size=2
+Write Configure register offset=0xC92,data=0xFF,size=2
+ 
+Read Configure register offset=0xC93,data=0x0,size=2
+Write Configure register offset=0xC93,data=0xFF,size=2
+ 
+Read Configure register offset=0xCA0,data=0x0,size=2
+Write Configure register offset=0xCA0,data=0xFF,size=2
+ 
+Read Configure register offset=0xCA1,data=0x0,size=2
+Write Configure register offset=0xCA1,data=0xFF,size=2
+ 
+Read Configure register offset=0xCA2,data=0x0,size=2
+Write Configure register offset=0xCA2,data=0xFF,size=2
+ 
+Read Configure register offset=0xCA3,data=0x0,size=2
+Write Configure register offset=0xCA3,data=0xFF,size=2
+ 
+Read Configure register offset=0xCB0,data=0x0,size=2
+Write Configure register offset=0xCB0,data=0xFF,size=2
+ 
+Read Configure register offset=0xCB6,data=0x0,size=2
+Write Configure register offset=0xCB6,data=0x0,size=2
+ 
+Read Configure register offset=0xC98,data=0x0,size=2
+Write Configure register offset=0xC98,data=0xFF,size=2
+ 
+Read Configure register offset=0xC99,data=0x0,size=2
+Write Configure register offset=0xC99,data=0xFF,size=2
+ 
+Read Configure register offset=0xC9A,data=0x0,size=2
+Write Configure register offset=0xC9A,data=0xFF,size=2
+ 
+Read Configure register offset=0xC9B,data=0x0,size=2
+Write Configure register offset=0xC9B,data=0xFF,size=2
+ 
+Read Configure register offset=0xCA8,data=0x0,size=2
+Write Configure register offset=0xCA8,data=0xFF,size=2
+ 
+Read Configure register offset=0xCA9,data=0x0,size=2
+Write Configure register offset=0xCA9,data=0xFF,size=2
+ 
+Read Configure register offset=0xCAA,data=0x0,size=2
+Write Configure register offset=0xCAA,data=0xFF,size=2
+ 
+Read Configure register offset=0xCAB,data=0x0,size=2
+Write Configure register offset=0xCAB,data=0xFF,size=2
+ 
+Read Configure register offset=0xCB2,data=0x0,size=2
+Write Configure register offset=0xCB2,data=0xFF,size=2
+ 
+Read Configure register offset=0xCB4,data=0x0,size=2
+Write Configure register offset=0xCB4,data=0xFF,size=2
+ 
+Read Configure register offset=0xB94,data=0x0,size=2
+Write Configure register offset=0xB94,data=0x88,size=2
+ 
+Read Configure register offset=0xB95,data=0x0,size=2
+Write Configure register offset=0xB95,data=0x88,size=2
+ 
+Read Configure register offset=0xB96,data=0x0,size=2
+Write Configure register offset=0xB96,data=0x88,size=2
+ 
+Read Configure register offset=0xB97,data=0x0,size=2
+Write Configure register offset=0xB97,data=0x88,size=2
+ 
+Read Configure register offset=0xB98,data=0x0,size=2
+Write Configure register offset=0xB98,data=0x88,size=2
+ 
+Read Configure register offset=0xB99,data=0x0,size=2
+Write Configure register offset=0xB99,data=0x88,size=2
+ 
+Read Configure register offset=0xB9A,data=0x0,size=2
+Write Configure register offset=0xB9A,data=0x88,size=2
+ 
+Read Configure register offset=0xB9B,data=0x0,size=2
+Write Configure register offset=0xB9B,data=0x88,size=2
+ 
+Read Configure register offset=0xB9C,data=0x0,size=2
+Write Configure register offset=0xB9C,data=0x88,size=2
+ 
+Read Configure register offset=0xBA2,data=0x0,size=2
+Write Configure register offset=0xBA2,data=0x88,size=2
+ 
+Read Configure register offset=0xBA3,data=0x0,size=2
+Write Configure register offset=0xBA3,data=0x88,size=2
+ 
+Read Configure register offset=0xBA4,data=0x0,size=2
+Write Configure register offset=0xBA4,data=0x88,size=2
+ 
+Read Configure register offset=0xBA5,data=0x0,size=2
+Write Configure register offset=0xBA5,data=0x88,size=2
+ 
+Read Configure register offset=0xBA6,data=0x0,size=2
+Write Configure register offset=0xBA6,data=0x88,size=2
+ 
+Read Configure register offset=0xBA7,data=0x0,size=2
+Write Configure register offset=0xBA7,data=0x88,size=2
+ 
+Read Configure register offset=0xBA8,data=0x0,size=2
+Write Configure register offset=0xBA8,data=0x88,size=2
+ 
+Read Configure register offset=0xBA9,data=0x0,size=2
+Write Configure register offset=0xBA9,data=0x88,size=2
+ 
+Read Configure register offset=0xBAA,data=0x0,size=2
+Write Configure register offset=0xBAA,data=0x88,size=2
+ 
+Read Configure register offset=0xBAB,data=0x0,size=2
+Write Configure register offset=0xBAB,data=0x88,size=2
+ 
+Read Configure register offset=0xBAC,data=0x0,size=2
+Write Configure register offset=0xBAC,data=0x88,size=2
+ 
+Read Configure register offset=0xBAD,data=0x0,size=2
+Write Configure register offset=0xBAD,data=0x88,size=2
+ 
+Read Configure register offset=0xBAE,data=0x0,size=2
+Write Configure register offset=0xBAE,data=0x88,size=2
+ 
+Read Configure register offset=0xBAF,data=0x0,size=2
+Write Configure register offset=0xBAF,data=0x88,size=2
+ 
+Read Configure register offset=0xBB0,data=0x0,size=2
+Write Configure register offset=0xBB0,data=0x88,size=2
+ 
+Read Configure register offset=0xBB1,data=0x0,size=2
+Write Configure register offset=0xBB1,data=0x88,size=2
+ 
+Read Configure register offset=0xBB2,data=0x0,size=2
+Write Configure register offset=0xBB2,data=0x88,size=2
+ 
+Read Configure register offset=0xBB3,data=0x0,size=2
+Write Configure register offset=0xBB3,data=0x88,size=2
+ 
+Read Configure register offset=0xD4C,data=0x0,size=2
+Write Configure register offset=0xD4C,data=0x0,size=2
+ 
+Read Configure register offset=0xD4D,data=0x0,size=2
+Write Configure register offset=0xD4D,data=0x0,size=2
+ 
+Read Configure register offset=0xD4E,data=0x0,size=2
+Write Configure register offset=0xD4E,data=0x0,size=2
+ 
+Read Configure register offset=0xD4F,data=0x0,size=2
+Write Configure register offset=0xD4F,data=0x0,size=2
+ 
+Read Configure register offset=0xD54,data=0x0,size=2
+Write Configure register offset=0xD54,data=0x0,size=2
+ 
+Read Configure register offset=0xD55,data=0x0,size=2
+Write Configure register offset=0xD55,data=0x0,size=2
+ 
+Read Configure register offset=0xD56,data=0x0,size=2
+Write Configure register offset=0xD56,data=0x0,size=2
+ 
+Read Configure register offset=0xD57,data=0x0,size=2
+Write Configure register offset=0xD57,data=0x0,size=2
+ 
+Read Configure register offset=0xD5C,data=0x0,size=2
+Write Configure register offset=0xD5C,data=0x0,size=2
+ 
+Read Configure register offset=0xD5E,data=0x0,size=2
+Write Configure register offset=0xD5E,data=0x1A,size=2
+ 
+Read Configure register offset=0xEAD,data=0x0,size=2
+Write Configure register offset=0xEAD,data=0x1A,size=2
+ 
+Read Configure register offset=0xEAE,data=0x0,size=2
+Write Configure register offset=0xEAE,data=0x1A,size=2
+ 
+Read Configure register offset=0xEAF,data=0x0,size=2
+Write Configure register offset=0xEAF,data=0x1A,size=2
+ 
+Read Configure register offset=0xD60,data=0x0,size=2
+Write Configure register offset=0xD60,data=0x4,size=2
+ 
+Read Configure register offset=0xD60,data=0x0,size=2
+Write Configure register offset=0xD60,data=0x8,size=2
+ 
+Read Configure register offset=0xD63,data=0x0,size=2
+Write Configure register offset=0xD63,data=0x4,size=2
+ 
+Read Configure register offset=0xD63,data=0x0,size=2
+Write Configure register offset=0xD63,data=0x8,size=2
+ 
+Read Configure register offset=0xD61,data=0x0,size=2
+Write Configure register offset=0xD61,data=0x28,size=2
+ 
+Read Configure register offset=0xD64,data=0x0,size=2
+Write Configure register offset=0xD64,data=0x2A,size=2
+ 
+Read Configure register offset=0xD5D,data=0x0,size=2
+Write Configure register offset=0xD5D,data=0x0,size=2
+ 
+Read Configure register offset=0xD5F,data=0x0,size=2
+Write Configure register offset=0xD5F,data=0x34,size=2
+ 
+Read Configure register offset=0xEB0,data=0x0,size=2
+Write Configure register offset=0xEB0,data=0x34,size=2
+ 
+Read Configure register offset=0xEB1,data=0x0,size=2
+Write Configure register offset=0xEB1,data=0x34,size=2
+ 
+Read Configure register offset=0xEB2,data=0x0,size=2
+Write Configure register offset=0xEB2,data=0x34,size=2
+ 
+Read Configure register offset=0xD62,data=0x0,size=2
+Write Configure register offset=0xD62,data=0x28,size=2
+ 
+Read Configure register offset=0xD65,data=0x0,size=2
+Write Configure register offset=0xD65,data=0x2A,size=2
+ 
+Read Configure register offset=0x203,data=0x0,size=2
+Write Configure register offset=0x203,data=0x1,size=2
+ 
+Read Configure register offset=0x203,data=0x1,size=2
+Write Configure register offset=0x203,data=0x5,size=2
+ 
+Read Configure register offset=0x203,data=0x5,size=2
+Write Configure register offset=0x203,data=0xD,size=2
+ 
+Read Configure register offset=0x203,data=0xD,size=2
+Write Configure register offset=0x203,data=0x1D,size=2
+ 
+Read Configure register offset=0xA00,data=0x0,size=2
+Write Configure register offset=0xA00,data=0x0,size=2
+ 
+Read Configure register offset=0x14B,data=0x0,size=2
+Write Configure register offset=0x14B,data=0x2,size=2
+ 
+Read Configure register offset=0x92A,data=0x0,size=2
+Write Configure register offset=0x92A,data=0x1,size=2
+ 
+Read Configure register offset=0xE1A,data=0x0,size=2
+Write Configure register offset=0xE1A,data=0x40,size=2
+ 
+Read Configure register offset=0xE1A,data=0x0,size=2
+Write Configure register offset=0xE1A,data=0x10,size=2
+ 
+Read Configure register offset=0xE12,data=0x0,size=2
+Write Configure register offset=0xE12,data=0x0,size=2
+ 
+Read Configure register offset=0xE12,data=0x0,size=2
+Write Configure register offset=0xE12,data=0x0,size=2
+ 
+Read Configure register offset=0xE12,data=0x0,size=2
+Write Configure register offset=0xE12,data=0x0,size=2
+ 
+Read Configure register offset=0xE12,data=0x0,size=2
+Write Configure register offset=0xE12,data=0x0,size=2
+ 
+Read Configure register offset=0xE13,data=0x0,size=2
+Write Configure register offset=0xE13,data=0x0,size=2
+ 
+Read Configure register offset=0xE13,data=0x0,size=2
+Write Configure register offset=0xE13,data=0x0,size=2
+ 
+Read Configure register offset=0xE13,data=0x0,size=2
+Write Configure register offset=0xE13,data=0x0,size=2
+ 
+Read Configure register offset=0xE13,data=0x0,size=2
+Write Configure register offset=0xE13,data=0x0,size=2
+ 
+Read Configure register offset=0xE9F,data=0x0,size=2
+Write Configure register offset=0xE9F,data=0x0,size=2
+ 
+Read Configure register offset=0xE9F,data=0x0,size=2
+Write Configure register offset=0xE9F,data=0x0,size=2
+ 
+Read Configure register offset=0xE10,data=0x0,size=2
+Write Configure register offset=0xE10,data=0x0,size=2
+ 
+Read Configure register offset=0xE11,data=0x0,size=2
+Write Configure register offset=0xE11,data=0x0,size=2
+ 
+Read Configure register offset=0xE12,data=0x0,size=2
+Write Configure register offset=0xE12,data=0x20,size=2
+ 
+Read Configure register offset=0xE13,data=0x0,size=2
+Write Configure register offset=0xE13,data=0x20,size=2
+ 
+Read Configure register offset=0xDD7,data=0x0,size=2
+Write Configure register offset=0xDD7,data=0xFC,size=2
+ 
+Read Configure register offset=0xDD8,data=0x0,size=2
+Write Configure register offset=0xDD8,data=0xFC,size=2
+ 
+Read Configure register offset=0xDD9,data=0x0,size=2
+Write Configure register offset=0xDD9,data=0xFC,size=2
+ 
+Read Configure register offset=0xDDA,data=0x0,size=2
+Write Configure register offset=0xDDA,data=0xFC,size=2
+ 
+Read Configure register offset=0xDDB,data=0x0,size=2
+Write Configure register offset=0xDDB,data=0xFC,size=2
+ 
+Read Configure register offset=0xDDC,data=0x0,size=2
+Write Configure register offset=0xDDC,data=0xFC,size=2
+ 
+Read Configure register offset=0xDDD,data=0x0,size=2
+Write Configure register offset=0xDDD,data=0xFC,size=2
+ 
+Read Configure register offset=0xDDE,data=0x0,size=2
+Write Configure register offset=0xDDE,data=0xFC,size=2
+ 
+Read Configure register offset=0xDDF,data=0x0,size=2
+Write Configure register offset=0xDDF,data=0xFC,size=2
+ 
+Read Configure register offset=0xDE0,data=0x0,size=2
+Write Configure register offset=0xDE0,data=0xFC,size=2
+ 
+Read Configure register offset=0xDE1,data=0x0,size=2
+Write Configure register offset=0xDE1,data=0xFC,size=2
+ 
+Read Configure register offset=0xDE2,data=0x0,size=2
+Write Configure register offset=0xDE2,data=0xFC,size=2
+ 
+Read Configure register offset=0xDE3,data=0x0,size=2
+Write Configure register offset=0xDE3,data=0xFC,size=2
+ 
+Read Configure register offset=0xDE4,data=0x0,size=2
+Write Configure register offset=0xDE4,data=0xFC,size=2
+ 
+Read Configure register offset=0xDE5,data=0x0,size=2
+Write Configure register offset=0xDE5,data=0xFC,size=2
+ 
+Read Configure register offset=0xDE6,data=0x0,size=2
+Write Configure register offset=0xDE6,data=0xFC,size=2
+ 
+Read Configure register offset=0xDE7,data=0x0,size=2
+Write Configure register offset=0xDE7,data=0xFC,size=2
+ 
+Read Configure register offset=0xDE8,data=0x0,size=2
+Write Configure register offset=0xDE8,data=0xFC,size=2
+ 
+_______________________Step5 NBODTLookUpProgramming___________
+
+Write Configure register offset=0x168,data=0xE1,size=1
+ 
+_______________________Step6 DRAMTimingProgramming____________
+
+Read Configure register offset=0x159,data=0x0,size=1
+Write Configure register offset=0x159,data=0x3,size=1
+ 
+Read Configure register offset=0x15B,data=0x0,size=1
+Write Configure register offset=0x15B,data=0x3,size=1
+ 
+Read Configure register offset=0x15E,data=0x81,size=1
+Write Configure register offset=0x15E,data=0x82,size=1
+ 
+Read Configure register offset=0x15A,data=0x0,size=1
+Write Configure register offset=0x15A,data=0x18,size=1
+ 
+Read Configure register offset=0x15C,data=0x0,size=1
+Write Configure register offset=0x15C,data=0x28,size=1
+ 
+Read Configure register offset=0x15F,data=0x0,size=1
+Write Configure register offset=0x15F,data=0x1F,size=1
+ 
+Read Configure register offset=0x15D,data=0x0,size=1
+Write Configure register offset=0x15D,data=0x4,size=1
+ 
+Read Configure register offset=0x15C,data=0x28,size=1
+Write Configure register offset=0x15C,data=0x2C,size=1
+ 
+Read Configure register offset=0x15E,data=0x82,size=1
+Write Configure register offset=0x15E,data=0x82,size=1
+ 
+Read Configure register offset=0x15B,data=0x3,size=1
+Write Configure register offset=0x15B,data=0x3,size=1
+ 
+Read Configure register offset=0x158,data=0x0,size=1
+Write Configure register offset=0x158,data=0x2,size=1
+ 
+Read Configure register offset=0x15D,data=0x4,size=1
+Write Configure register offset=0x15D,data=0x84,size=1
+ 
+Read Configure register offset=0x15A,data=0x18,size=1
+Write Configure register offset=0x15A,data=0x18,size=1
+ 
+Read Configure register offset=0x162,data=0x8000,size=2
+Write Configure register offset=0x162,data=0xA000,size=2
+ 
+Read Configure register offset=0x149,data=0x2B,size=1
+Write Configure register offset=0x149,data=0x3B,size=1
+ 
+_______________________Step7 DRAMFreqProgramming______________
+
+Read Configure register offset=0x208,data=0x800,size=2
+Write Configure register offset=0x208,data=0x681E,size=2
+ 
+_______________________Step8 InitDRAMByRank____________________
+
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0xBA98,size=2
+Write Configure register offset=0xA0,data=0x90,size=2
+ 
+Read Configure register offset=0xA0,data=0x90,size=1
+Read Configure register offset=0xA0,data=0x90,size=2
+Write Configure register offset=0xA0,data=0x10,size=2
+ 
+Read Configure register offset=0xA1,data=0x0,size=1
+Read Configure register offset=0xA1,data=0x9800,size=2
+Write Configure register offset=0xA1,data=0x2,size=2
+ 
+Read Configure register offset=0xA1,data=0x2,size=1
+Read Configure register offset=0xA1,data=0x2,size=2
+Write Configure register offset=0xA1,data=0x32,size=2
+ 
+Read Configure register offset=0x145,data=0x1D,size=1
+Read Configure register offset=0x145,data=0x1D,size=1
+Write Configure register offset=0x145,data=0x15,size=1
+ 
+Read Configure register offset=0x16A,data=0xCC,size=1
+Write Configure register offset=0x16A,data=0x4C,size=1
+ 
+Read Configure register offset=0x16E,data=0x0,size=1
+Write Configure register offset=0x16E,data=0x80,size=1
+ 
+Read Configure register offset=0x172,data=0x6,size=1
+Write Configure register offset=0x172,data=0x4,size=1
+ 
+Read Configure register offset=0x16C,data=0x10,size=1
+Write Configure register offset=0x16C,data=0x10,size=1
+ 
+Read Configure register offset=0x16C,data=0x10,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0xA0,data=0x10,size=1
+Read Configure register offset=0xA0,data=0x3210,size=2
+Write Configure register offset=0xA0,data=0x18,size=2
+ 
+Read Configure register offset=0xA0,data=0x18,size=1
+Read Configure register offset=0xA0,data=0x18,size=2
+Write Configure register offset=0xA0,data=0x18,size=2
+ 
+Read Configure register offset=0xA1,data=0x0,size=1
+Read Configure register offset=0xA1,data=0x0,size=2
+Write Configure register offset=0xA1,data=0x2,size=2
+ 
+Read Configure register offset=0xA1,data=0x2,size=1
+Read Configure register offset=0xA1,data=0x2,size=2
+Write Configure register offset=0xA1,data=0x32,size=2
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16E,data=0xB2,size=1
+Write Configure register offset=0x16E,data=0xA2,size=1
+ 
+Read Configure register offset=0x16E,data=0xA0,size=1
+Write Configure register offset=0x16E,data=0xA0,size=1
+ 
+Read Configure register offset=0x16F,data=0x0,size=1
+Write Configure register offset=0x16F,data=0x0,size=1
+ 
+Read Configure register offset=0x16F,data=0x0,size=1
+Write Configure register offset=0x16F,data=0x0,size=1
+ 
+Read Configure register offset=0x172,data=0x4,size=1
+Write Configure register offset=0x172,data=0x4,size=1
+ 
+Read Configure register offset=0x16D,data=0x80,size=1
+Write Configure register offset=0x16D,data=0x80,size=1
+ 
+Read Configure register offset=0x16E,data=0xA0,size=1
+Write Configure register offset=0x16E,data=0xA1,size=1
+ 
+Init Rank 00
+Read Configure register offset=0x16E,data=0xA0,size=1
+Read Configure register offset=0xA0,data=0x0,size=1
+Read Configure register offset=0xA0,data=0x3218,size=2
+Write Configure register offset=0xA0,data=0x0,size=2
+ 
+Read Configure register offset=0xA0,data=0x0,size=1
+Read Configure register offset=0xA0,data=0x0,size=2
+Write Configure register offset=0xA0,data=0x90,size=2
+ 
+Read Configure register offset=0xA1,data=0x0,size=1
+Read Configure register offset=0xA1,data=0x0,size=2
+Write Configure register offset=0xA1,data=0x2,size=2
+ 
+Read Configure register offset=0xA1,data=0x2,size=1
+Read Configure register offset=0xA1,data=0x2,size=2
+Write Configure register offset=0xA1,data=0x32,size=2
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16E,data=0xA3,size=1
+Write Configure register offset=0x16E,data=0xA3,size=1
+ 
+Read Configure register offset=0x16E,data=0xA3,size=1
+Write Configure register offset=0x16E,data=0xA3,size=1
+ 
+Read Configure register offset=0x16F,data=0x0,size=1
+Write Configure register offset=0x16F,data=0x0,size=1
+ 
+Read Configure register offset=0x16F,data=0x0,size=1
+Write Configure register offset=0x16F,data=0x0,size=1
+ 
+Read Configure register offset=0x172,data=0x4,size=1
+Write Configure register offset=0x172,data=0x4,size=1
+ 
+Read Configure register offset=0x16D,data=0x80,size=1
+Write Configure register offset=0x16D,data=0x80,size=1
+ 
+Read Configure register offset=0x16E,data=0xA3,size=1
+Write Configure register offset=0x16E,data=0xA3,size=1
+ 
+Init Rank 01
+Read Configure register offset=0x16E,data=0xA3,size=1
+Read Configure register offset=0x16E,data=0xA3,size=1
+Read Configure register offset=0x16E,data=0xA0,size=1
+Read Configure register offset=0xA0,data=0x90,size=1
+Read Configure register offset=0xA0,data=0x3290,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0x98,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0x16D,data=0x80,size=1
+Write Configure register offset=0x16D,data=0x80,size=1
+ 
+Read Configure register offset=0x16E,data=0xA0,size=1
+Write Configure register offset=0x16E,data=0x20,size=1
+ 
+Read Configure register offset=0x16A,data=0x4C,size=1
+Write Configure register offset=0x16A,data=0xCC,size=1
+ 
+Read Configure register offset=0x145,data=0x15,size=1
+Write Configure register offset=0x145,data=0x1D,size=1
+ 
+execute HwInit
+_______________________Step9 SetRefreshCounter____________________
+
+Read Configure register offset=0x188,data=0x0,size=2
+Write Configure register offset=0x188,data=0x40,size=2
+ 
+Read Configure register offset=0x178,data=0x3000,size=2
+Write Configure register offset=0x178,data=0x3010,size=2
+ 
+_______________________Step10 IOTimingControl____________________
+
+***************************************
+|   DO YOU WANT TO DO Calibration     |
+|       Please Input (y/n)            |
+***************************************
+>>>y
+Read Configure register offset=0x14B,data=0x2,size=2
+Write Configure register offset=0x14B,data=0x2,size=2
+ 
+Read Configure register offset=0x14B,data=0x2,size=1
+Write Configure register offset=0x14B,data=0x2,size=1
+ 
+Read Configure register offset=0x747,data=0x0,size=1
+Write Configure register offset=0x747,data=0x20,size=1
+ 
+Write Configure register offset=0x738,data=0xF5,size=1
+ 
+Write Configure register offset=0x739,data=0xF5,size=1
+ 
+Write Configure register offset=0x73A,data=0xF5,size=1
+ 
+Write Configure register offset=0x73B,data=0xF5,size=1
+ 
+Write Configure register offset=0x73C,data=0xF5,size=1
+ 
+Write Configure register offset=0x73D,data=0xF5,size=1
+ 
+Write Configure register offset=0x73E,data=0xF5,size=1
+ 
+Write Configure register offset=0x73F,data=0xF5,size=1
+ 
+Write Configure register offset=0x738,data=0xF5,size=1
+ 
+Write Configure register offset=0x739,data=0xF5,size=1
+ 
+Write Configure register offset=0x73A,data=0xF5,size=1
+ 
+Write Configure register offset=0x73B,data=0xF5,size=1
+ 
+Write Configure register offset=0x73C,data=0xF5,size=1
+ 
+Write Configure register offset=0x73D,data=0xF5,size=1
+ 
+Write Configure register offset=0x73E,data=0xF5,size=1
+ 
+Write Configure register offset=0x73F,data=0xF5,size=1
+ 
+Read Configure register offset=0x614,data=0x0,size=1
+Write Configure register offset=0x614,data=0x0,size=1
+ 
+Read Configure register offset=0x614,data=0x0,size=1
+Write Configure register offset=0x614,data=0x8,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x0,size=1
+Write Configure register offset=0x36C,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x0,size=1
+Write Configure register offset=0x36C,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x0,size=1
+Write Configure register offset=0x36C,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x0,size=1
+Write Configure register offset=0x36C,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x0,size=1
+Write Configure register offset=0x36D,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x0,size=1
+Write Configure register offset=0x36D,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x0,size=1
+Write Configure register offset=0x36D,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x0,size=1
+Write Configure register offset=0x36D,data=0x0,size=1
+ 
+Read Configure register offset=0xA8,data=0x8111,size=2
+Read Configure register offset=0xA8,data=0x8111,size=2
+Write Configure register offset=0xA8,data=0x8333,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x1,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x161,data=0x0,size=1
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Read Configure register offset=0x14C,data=0x0,size=1
+Read Configure register offset=0x14C,data=0x0,size=1
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Read Configure register offset=0x90,data=0x0,size=1
+Write Configure register offset=0x90,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x1,size=1
+Write Configure register offset=0x88,data=0x0,size=1
+ 
+Read Configure register offset=0x91,data=0x1,size=1
+Write Configure register offset=0x91,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x2,size=1
+Write Configure register offset=0x89,data=0x0,size=1
+ 
+Read Configure register offset=0x92,data=0x2,size=1
+Write Configure register offset=0x92,data=0x0,size=1
+ 
+Read Configure register offset=0x8A,data=0x3,size=1
+Write Configure register offset=0x8A,data=0x0,size=1
+ 
+Read Configure register offset=0x93,data=0x3,size=1
+Write Configure register offset=0x93,data=0x0,size=1
+ 
+Read Configure register offset=0x8B,data=0x4,size=1
+Write Configure register offset=0x8B,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x0,size=1
+Write Configure register offset=0x88,data=0x4,size=1
+ 
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0x98,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0x86A,data=0x0,size=1
+Write Configure register offset=0x86A,data=0x0,size=1
+ 
+Read Configure register offset=0x856,data=0x0,size=1
+Write Configure register offset=0x856,data=0x0,size=1
+ 
+Read Configure register offset=0x608,data=0x0,size=1
+Write Configure register offset=0x608,data=0x20,size=1
+ 
+Read Configure register offset=0x608,data=0x20,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x882,data=0x0,size=1
+Write Configure register offset=0x882,data=0x2,size=1
+ 
+Read Configure register offset=0x220,data=0x0,size=2
+Write Configure register offset=0x220,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0xFF00,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0x0,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0xFF00,size=2
+ 
+Read Configure register offset=0x201,data=0x10,size=1
+Write Configure register offset=0x201,data=0x90,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x32,size=1
+ 
+Read Configure register offset=0x16C,data=0x17,size=1
+Read Configure register offset=0x16C,data=0x32,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x233,data=0xA0,size=1
+Write Configure register offset=0x233,data=0x60,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Write Configure register offset=0x86C,data=0x20,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x201,data=0xB0,size=1
+Write Configure register offset=0x201,data=0x30,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0xE0,size=4
+ 
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Write Configure register offset=0xA8,data=0x8111,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x0,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86F,data=0x31,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x886,data=0x0,size=1
+===END:Debug Message for TNI CheckRange=== 
+
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x0,size=1
+Write Configure register offset=0x36C,data=0x40,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x40,size=1
+Write Configure register offset=0x36C,data=0x50,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x50,size=1
+Write Configure register offset=0x36C,data=0x54,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x54,size=1
+Write Configure register offset=0x36C,data=0x55,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x0,size=1
+Write Configure register offset=0x36D,data=0x40,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x40,size=1
+Write Configure register offset=0x36D,data=0x50,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x50,size=1
+Write Configure register offset=0x36D,data=0x54,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x54,size=1
+Write Configure register offset=0x36D,data=0x55,size=1
+ 
+Read Configure register offset=0xA8,data=0x8111,size=2
+Read Configure register offset=0xA8,data=0x8111,size=2
+Write Configure register offset=0xA8,data=0x8333,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x1,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x161,data=0x0,size=1
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Read Configure register offset=0x14C,data=0x0,size=1
+Read Configure register offset=0x14C,data=0x0,size=1
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Read Configure register offset=0x90,data=0x0,size=1
+Write Configure register offset=0x90,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x4,size=1
+Write Configure register offset=0x88,data=0x0,size=1
+ 
+Read Configure register offset=0x91,data=0x0,size=1
+Write Configure register offset=0x91,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x0,size=1
+Write Configure register offset=0x89,data=0x0,size=1
+ 
+Read Configure register offset=0x92,data=0x0,size=1
+Write Configure register offset=0x92,data=0x0,size=1
+ 
+Read Configure register offset=0x8A,data=0x0,size=1
+Write Configure register offset=0x8A,data=0x0,size=1
+ 
+Read Configure register offset=0x93,data=0x0,size=1
+Write Configure register offset=0x93,data=0x0,size=1
+ 
+Read Configure register offset=0x8B,data=0x0,size=1
+Write Configure register offset=0x8B,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x0,size=1
+Write Configure register offset=0x88,data=0x4,size=1
+ 
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0x98,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0x86A,data=0x0,size=1
+Write Configure register offset=0x86A,data=0x0,size=1
+ 
+Read Configure register offset=0x856,data=0x0,size=1
+Write Configure register offset=0x856,data=0x0,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x882,data=0x0,size=1
+Write Configure register offset=0x882,data=0x2,size=1
+ 
+Read Configure register offset=0x220,data=0x0,size=2
+Write Configure register offset=0x220,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0xFF00,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0x0,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0xFF00,size=2
+ 
+Read Configure register offset=0x201,data=0x10,size=1
+Write Configure register offset=0x201,data=0x90,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x32,size=1
+ 
+Read Configure register offset=0x16C,data=0x32,size=1
+Read Configure register offset=0x16C,data=0x32,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x233,data=0x60,size=1
+Write Configure register offset=0x233,data=0x60,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Write Configure register offset=0x86C,data=0x20,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x201,data=0xB0,size=1
+Write Configure register offset=0x201,data=0x30,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0xE0,size=4
+ 
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Write Configure register offset=0xA8,data=0x8111,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x0,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x886,data=0x0,size=1
+===END:Debug Message for TNI CheckRange=== 
+
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x55,size=1
+Write Configure register offset=0x36C,data=0x95,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x95,size=1
+Write Configure register offset=0x36C,data=0xA5,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xA5,size=1
+Write Configure register offset=0x36C,data=0xA9,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xA9,size=1
+Write Configure register offset=0x36C,data=0xAA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x55,size=1
+Write Configure register offset=0x36D,data=0x95,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0x95,size=1
+Write Configure register offset=0x36D,data=0xA5,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0xA5,size=1
+Write Configure register offset=0x36D,data=0xA9,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0xA9,size=1
+Write Configure register offset=0x36D,data=0xAA,size=1
+ 
+Read Configure register offset=0xA8,data=0x8111,size=2
+Read Configure register offset=0xA8,data=0x8111,size=2
+Write Configure register offset=0xA8,data=0x8333,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x1,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x161,data=0x0,size=1
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Read Configure register offset=0x14C,data=0x0,size=1
+Read Configure register offset=0x14C,data=0x0,size=1
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Read Configure register offset=0x90,data=0x0,size=1
+Write Configure register offset=0x90,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x4,size=1
+Write Configure register offset=0x88,data=0x0,size=1
+ 
+Read Configure register offset=0x91,data=0x0,size=1
+Write Configure register offset=0x91,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x0,size=1
+Write Configure register offset=0x89,data=0x0,size=1
+ 
+Read Configure register offset=0x92,data=0x0,size=1
+Write Configure register offset=0x92,data=0x0,size=1
+ 
+Read Configure register offset=0x8A,data=0x0,size=1
+Write Configure register offset=0x8A,data=0x0,size=1
+ 
+Read Configure register offset=0x93,data=0x0,size=1
+Write Configure register offset=0x93,data=0x0,size=1
+ 
+Read Configure register offset=0x8B,data=0x0,size=1
+Write Configure register offset=0x8B,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x0,size=1
+Write Configure register offset=0x88,data=0x4,size=1
+ 
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0x98,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0x86A,data=0x0,size=1
+Write Configure register offset=0x86A,data=0x0,size=1
+ 
+Read Configure register offset=0x856,data=0x0,size=1
+Write Configure register offset=0x856,data=0x0,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x882,data=0x0,size=1
+Write Configure register offset=0x882,data=0x2,size=1
+ 
+Read Configure register offset=0x220,data=0x0,size=2
+Write Configure register offset=0x220,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0xFF00,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0x0,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0xFF00,size=2
+ 
+Read Configure register offset=0x201,data=0x30,size=1
+Write Configure register offset=0x201,data=0xB0,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x32,size=1
+ 
+Read Configure register offset=0x16C,data=0x32,size=1
+Read Configure register offset=0x16C,data=0x32,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x233,data=0x60,size=1
+Write Configure register offset=0x233,data=0x60,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Write Configure register offset=0x86C,data=0x20,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x201,data=0xB0,size=1
+Write Configure register offset=0x201,data=0x30,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0xE0,size=4
+ 
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Write Configure register offset=0xA8,data=0x8111,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x0,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x886,data=0x0,size=1
+===END:Debug Message for TNI CheckRange=== 
+
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xAA,size=1
+Write Configure register offset=0x36C,data=0xEA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xEA,size=1
+Write Configure register offset=0x36C,data=0xFA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xFA,size=1
+Write Configure register offset=0x36C,data=0xFE,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xFE,size=1
+Write Configure register offset=0x36C,data=0xFF,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0xAA,size=1
+Write Configure register offset=0x36D,data=0xEA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0xEA,size=1
+Write Configure register offset=0x36D,data=0xFA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0xFA,size=1
+Write Configure register offset=0x36D,data=0xFE,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36D,data=0xFE,size=1
+Write Configure register offset=0x36D,data=0xFF,size=1
+ 
+Read Configure register offset=0xA8,data=0x8111,size=2
+Read Configure register offset=0xA8,data=0x8111,size=2
+Write Configure register offset=0xA8,data=0x8333,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x1,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x161,data=0x0,size=1
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Read Configure register offset=0x14C,data=0x0,size=1
+Read Configure register offset=0x14C,data=0x0,size=1
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Read Configure register offset=0x90,data=0x0,size=1
+Write Configure register offset=0x90,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x4,size=1
+Write Configure register offset=0x88,data=0x0,size=1
+ 
+Read Configure register offset=0x91,data=0x0,size=1
+Write Configure register offset=0x91,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x0,size=1
+Write Configure register offset=0x89,data=0x0,size=1
+ 
+Read Configure register offset=0x92,data=0x0,size=1
+Write Configure register offset=0x92,data=0x0,size=1
+ 
+Read Configure register offset=0x8A,data=0x0,size=1
+Write Configure register offset=0x8A,data=0x0,size=1
+ 
+Read Configure register offset=0x93,data=0x0,size=1
+Write Configure register offset=0x93,data=0x0,size=1
+ 
+Read Configure register offset=0x8B,data=0x0,size=1
+Write Configure register offset=0x8B,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x0,size=1
+Write Configure register offset=0x88,data=0x4,size=1
+ 
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0x98,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0x86A,data=0x0,size=1
+Write Configure register offset=0x86A,data=0x0,size=1
+ 
+Read Configure register offset=0x856,data=0x0,size=1
+Write Configure register offset=0x856,data=0x0,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x882,data=0x0,size=1
+Write Configure register offset=0x882,data=0x2,size=1
+ 
+Read Configure register offset=0x220,data=0x0,size=2
+Write Configure register offset=0x220,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0xFF00,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0x0,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0xFF00,size=2
+ 
+Read Configure register offset=0x201,data=0x30,size=1
+Write Configure register offset=0x201,data=0xB0,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x32,size=1
+ 
+Read Configure register offset=0x16C,data=0x32,size=1
+Read Configure register offset=0x16C,data=0x32,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x233,data=0x60,size=1
+Write Configure register offset=0x233,data=0x60,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Write Configure register offset=0x86C,data=0x20,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x17,size=1
+Read Configure register offset=0x201,data=0x0,size=1
+Write Configure register offset=0x201,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0xE0,size=4
+ 
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Write Configure register offset=0xA8,data=0x8111,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x0,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x886,data=0x0,size=1
+===END:Debug Message for TNI CheckRange=== 
+
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x0,size=1
+Write Configure register offset=0x371,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x0,size=1
+Write Configure register offset=0x371,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x0,size=1
+Write Configure register offset=0x371,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x0,size=1
+Write Configure register offset=0x371,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x0,size=1
+Write Configure register offset=0x372,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x0,size=1
+Write Configure register offset=0x372,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x0,size=1
+Write Configure register offset=0x372,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x0,size=1
+Write Configure register offset=0x372,data=0x0,size=1
+ 
+Read Configure register offset=0xA8,data=0x8111,size=2
+Read Configure register offset=0xA8,data=0x8111,size=2
+Write Configure register offset=0xA8,data=0x8333,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x1,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x161,data=0x0,size=1
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Read Configure register offset=0x14C,data=0x0,size=1
+Read Configure register offset=0x14C,data=0x0,size=1
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Read Configure register offset=0x90,data=0x0,size=1
+Write Configure register offset=0x90,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x4,size=1
+Write Configure register offset=0x88,data=0x0,size=1
+ 
+Read Configure register offset=0x91,data=0x0,size=1
+Write Configure register offset=0x91,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x0,size=1
+Write Configure register offset=0x89,data=0x0,size=1
+ 
+Read Configure register offset=0x92,data=0x0,size=1
+Write Configure register offset=0x92,data=0x0,size=1
+ 
+Read Configure register offset=0x8A,data=0x0,size=1
+Write Configure register offset=0x8A,data=0x0,size=1
+ 
+Read Configure register offset=0x93,data=0x0,size=1
+Write Configure register offset=0x93,data=0x0,size=1
+ 
+Read Configure register offset=0x8B,data=0x0,size=1
+Write Configure register offset=0x8B,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x0,size=1
+Write Configure register offset=0x89,data=0x4,size=1
+ 
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0x98,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0x86A,data=0x0,size=1
+Write Configure register offset=0x86A,data=0x0,size=1
+ 
+Read Configure register offset=0x856,data=0x0,size=1
+Write Configure register offset=0x856,data=0x0,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x882,data=0x0,size=1
+Write Configure register offset=0x882,data=0x2,size=1
+ 
+Read Configure register offset=0x220,data=0x0,size=2
+Write Configure register offset=0x220,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0xFF00,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0x0,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0xFF00,size=2
+ 
+Read Configure register offset=0x201,data=0x20,size=1
+Write Configure register offset=0x201,data=0xA0,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x32,size=1
+ 
+Read Configure register offset=0x16C,data=0x32,size=1
+Read Configure register offset=0x16C,data=0x32,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x233,data=0x0,size=1
+Write Configure register offset=0x233,data=0x40,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Write Configure register offset=0x86C,data=0x20,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x201,data=0xA0,size=1
+Write Configure register offset=0x201,data=0x20,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0xE0,size=4
+ 
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Write Configure register offset=0xA8,data=0x8111,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x0,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x886,data=0x0,size=1
+===END:Debug Message for TNI CheckRange=== 
+
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x0,size=1
+Write Configure register offset=0x371,data=0x40,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x40,size=1
+Write Configure register offset=0x371,data=0x50,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x50,size=1
+Write Configure register offset=0x371,data=0x54,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x54,size=1
+Write Configure register offset=0x371,data=0x55,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x0,size=1
+Write Configure register offset=0x372,data=0x40,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x40,size=1
+Write Configure register offset=0x372,data=0x50,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x50,size=1
+Write Configure register offset=0x372,data=0x54,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x54,size=1
+Write Configure register offset=0x372,data=0x55,size=1
+ 
+Read Configure register offset=0xA8,data=0x8111,size=2
+Read Configure register offset=0xA8,data=0x8111,size=2
+Write Configure register offset=0xA8,data=0x8333,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x1,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x161,data=0x0,size=1
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Read Configure register offset=0x14C,data=0x0,size=1
+Read Configure register offset=0x14C,data=0x0,size=1
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Read Configure register offset=0x90,data=0x0,size=1
+Write Configure register offset=0x90,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x0,size=1
+Write Configure register offset=0x88,data=0x0,size=1
+ 
+Read Configure register offset=0x91,data=0x0,size=1
+Write Configure register offset=0x91,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x4,size=1
+Write Configure register offset=0x89,data=0x0,size=1
+ 
+Read Configure register offset=0x92,data=0x0,size=1
+Write Configure register offset=0x92,data=0x0,size=1
+ 
+Read Configure register offset=0x8A,data=0x0,size=1
+Write Configure register offset=0x8A,data=0x0,size=1
+ 
+Read Configure register offset=0x93,data=0x0,size=1
+Write Configure register offset=0x93,data=0x0,size=1
+ 
+Read Configure register offset=0x8B,data=0x0,size=1
+Write Configure register offset=0x8B,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x0,size=1
+Write Configure register offset=0x89,data=0x4,size=1
+ 
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0x98,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0x86A,data=0x0,size=1
+Write Configure register offset=0x86A,data=0x0,size=1
+ 
+Read Configure register offset=0x856,data=0x0,size=1
+Write Configure register offset=0x856,data=0x0,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x882,data=0x0,size=1
+Write Configure register offset=0x882,data=0x2,size=1
+ 
+Read Configure register offset=0x220,data=0x0,size=2
+Write Configure register offset=0x220,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0xFF00,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0x0,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0xFF00,size=2
+ 
+Read Configure register offset=0x201,data=0x20,size=1
+Write Configure register offset=0x201,data=0xA0,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x32,size=1
+ 
+Read Configure register offset=0x16C,data=0x32,size=1
+Read Configure register offset=0x16C,data=0x32,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x32,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x233,data=0x0,size=1
+Write Configure register offset=0x233,data=0x40,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Write Configure register offset=0x86C,data=0x20,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x201,data=0xA0,size=1
+Write Configure register offset=0x201,data=0x20,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0xE0,size=4
+ 
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Write Configure register offset=0xA8,data=0x8111,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x0,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x886,data=0x0,size=1
+===END:Debug Message for TNI CheckRange=== 
+
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x55,size=1
+Write Configure register offset=0x371,data=0x95,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x95,size=1
+Write Configure register offset=0x371,data=0xA5,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xA5,size=1
+Write Configure register offset=0x371,data=0xA9,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xA9,size=1
+Write Configure register offset=0x371,data=0xAA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x55,size=1
+Write Configure register offset=0x372,data=0x95,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0x95,size=1
+Write Configure register offset=0x372,data=0xA5,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0xA5,size=1
+Write Configure register offset=0x372,data=0xA9,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0xA9,size=1
+Write Configure register offset=0x372,data=0xAA,size=1
+ 
+Read Configure register offset=0xA8,data=0x8111,size=2
+Read Configure register offset=0xA8,data=0x8111,size=2
+Write Configure register offset=0xA8,data=0x8333,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x1,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x161,data=0x0,size=1
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Read Configure register offset=0x14C,data=0x0,size=1
+Read Configure register offset=0x14C,data=0x0,size=1
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Read Configure register offset=0x90,data=0x0,size=1
+Write Configure register offset=0x90,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x0,size=1
+Write Configure register offset=0x88,data=0x0,size=1
+ 
+Read Configure register offset=0x91,data=0x0,size=1
+Write Configure register offset=0x91,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x4,size=1
+Write Configure register offset=0x89,data=0x0,size=1
+ 
+Read Configure register offset=0x92,data=0x0,size=1
+Write Configure register offset=0x92,data=0x0,size=1
+ 
+Read Configure register offset=0x8A,data=0x0,size=1
+Write Configure register offset=0x8A,data=0x0,size=1
+ 
+Read Configure register offset=0x93,data=0x0,size=1
+Write Configure register offset=0x93,data=0x0,size=1
+ 
+Read Configure register offset=0x8B,data=0x0,size=1
+Write Configure register offset=0x8B,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x0,size=1
+Write Configure register offset=0x89,data=0x4,size=1
+ 
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0x98,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0x86A,data=0x0,size=1
+Write Configure register offset=0x86A,data=0x0,size=1
+ 
+Read Configure register offset=0x856,data=0x0,size=1
+Write Configure register offset=0x856,data=0x0,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x882,data=0x0,size=1
+Write Configure register offset=0x882,data=0x2,size=1
+ 
+Read Configure register offset=0x220,data=0x0,size=2
+Write Configure register offset=0x220,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0xFF00,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0x0,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0xFF00,size=2
+ 
+Read Configure register offset=0x201,data=0x20,size=1
+Write Configure register offset=0x201,data=0xA0,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x32,size=1
+ 
+Read Configure register offset=0x16C,data=0x32,size=1
+Read Configure register offset=0x16C,data=0x32,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x233,data=0x40,size=1
+Write Configure register offset=0x233,data=0x40,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Write Configure register offset=0x86C,data=0x20,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x201,data=0xA0,size=1
+Write Configure register offset=0x201,data=0x20,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0xE0,size=4
+ 
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Write Configure register offset=0xA8,data=0x8111,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x0,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x886,data=0x0,size=1
+===END:Debug Message for TNI CheckRange=== 
+
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xAA,size=1
+Write Configure register offset=0x371,data=0xEA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xEA,size=1
+Write Configure register offset=0x371,data=0xFA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xFA,size=1
+Write Configure register offset=0x371,data=0xFE,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xFE,size=1
+Write Configure register offset=0x371,data=0xFF,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0xAA,size=1
+Write Configure register offset=0x372,data=0xEA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0xEA,size=1
+Write Configure register offset=0x372,data=0xFA,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0xFA,size=1
+Write Configure register offset=0x372,data=0xFE,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x372,data=0xFE,size=1
+Write Configure register offset=0x372,data=0xFF,size=1
+ 
+Read Configure register offset=0xA8,data=0x8111,size=2
+Read Configure register offset=0xA8,data=0x8111,size=2
+Write Configure register offset=0xA8,data=0x8333,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x1,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x161,data=0x0,size=1
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Read Configure register offset=0x14C,data=0x0,size=1
+Read Configure register offset=0x14C,data=0x0,size=1
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Read Configure register offset=0x90,data=0x0,size=1
+Write Configure register offset=0x90,data=0x0,size=1
+ 
+Read Configure register offset=0x88,data=0x0,size=1
+Write Configure register offset=0x88,data=0x0,size=1
+ 
+Read Configure register offset=0x91,data=0x0,size=1
+Write Configure register offset=0x91,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x4,size=1
+Write Configure register offset=0x89,data=0x0,size=1
+ 
+Read Configure register offset=0x92,data=0x0,size=1
+Write Configure register offset=0x92,data=0x0,size=1
+ 
+Read Configure register offset=0x8A,data=0x0,size=1
+Write Configure register offset=0x8A,data=0x0,size=1
+ 
+Read Configure register offset=0x93,data=0x0,size=1
+Write Configure register offset=0x93,data=0x0,size=1
+ 
+Read Configure register offset=0x8B,data=0x0,size=1
+Write Configure register offset=0x8B,data=0x0,size=1
+ 
+Read Configure register offset=0x89,data=0x0,size=1
+Write Configure register offset=0x89,data=0x4,size=1
+ 
+Read Configure register offset=0xA0,data=0x98,size=1
+Read Configure register offset=0xA0,data=0x98,size=2
+Write Configure register offset=0xA0,data=0x98,size=2
+ 
+Read Configure register offset=0x86A,data=0x0,size=1
+Write Configure register offset=0x86A,data=0x0,size=1
+ 
+Read Configure register offset=0x856,data=0x0,size=1
+Write Configure register offset=0x856,data=0x0,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x608,data=0x38,size=1
+Write Configure register offset=0x608,data=0x38,size=1
+ 
+Read Configure register offset=0x882,data=0x0,size=1
+Write Configure register offset=0x882,data=0x2,size=1
+ 
+Read Configure register offset=0x220,data=0x0,size=2
+Write Configure register offset=0x220,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0x0,size=2
+ 
+Read Configure register offset=0x83A,data=0x0,size=2
+Write Configure register offset=0x83A,data=0xFF00,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0x0,size=2
+ 
+Read Configure register offset=0x83C,data=0x0,size=2
+Write Configure register offset=0x83C,data=0xFF00,size=2
+ 
+Read Configure register offset=0x201,data=0x20,size=1
+Write Configure register offset=0x201,data=0xA0,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x32,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x16C,data=0x32,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x32,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x17,size=1
+Read Configure register offset=0x233,data=0x0,size=1
+Write Configure register offset=0x233,data=0x40,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Write Configure register offset=0x86C,data=0x20,size=1
+ 
+Read Configure register offset=0x86C,data=0x0,size=1
+Read Configure register offset=0x16C,data=0x30,size=1
+Write Configure register offset=0x16C,data=0x33,size=1
+ 
+Read Configure register offset=0x16C,data=0x33,size=1
+Read Configure register offset=0x16C,data=0x33,size=1
+Write Configure register offset=0x16C,data=0x30,size=1
+ 
+Read Configure register offset=0x16C,data=0x30,size=1
+Read Configure register offset=0x201,data=0xA0,size=1
+Write Configure register offset=0x201,data=0x20,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0xE0,size=4
+ 
+Write Configure register offset=0x161,data=0x0,size=1
+ 
+Write Configure register offset=0x14C,data=0x0,size=1
+ 
+Write Configure register offset=0xA8,data=0x8111,size=2
+ 
+Read Configure register offset=0x86B,data=0x0,size=1
+Write Configure register offset=0x86B,data=0x0,size=1
+ 
+Read Configure register offset=0x181,data=0x44,size=1
+Write Configure register offset=0x181,data=0x44,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86D,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x86F,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x871,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x873,data=0x0,size=2
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x20,size=4
+ 
+Read Configure register offset=0x875,data=0x0,size=2
+Read Configure register offset=0x886,data=0x0,size=1
+===END:Debug Message for TNI CheckRange=== 
+
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x348,data=0x0,size=1
+Write Configure register offset=0x348,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x348,data=0x0,size=1
+Write Configure register offset=0x348,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xFF,size=1
+Write Configure register offset=0x36C,data=0x3F,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x3F,size=1
+Write Configure register offset=0x36C,data=0xF,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x300,data=0x0,size=1
+Write Configure register offset=0x300,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x301,data=0x0,size=1
+Write Configure register offset=0x301,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x300,data=0x0,size=1
+Write Configure register offset=0x300,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x301,data=0x0,size=1
+Write Configure register offset=0x301,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x351,data=0x0,size=1
+Write Configure register offset=0x351,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x351,data=0x0,size=1
+Write Configure register offset=0x351,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xFF,size=1
+Write Configure register offset=0x371,data=0x3F,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x3F,size=1
+Write Configure register offset=0x371,data=0xF,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x312,data=0x0,size=1
+Write Configure register offset=0x312,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x313,data=0x0,size=1
+Write Configure register offset=0x313,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x312,data=0x0,size=1
+Write Configure register offset=0x312,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x313,data=0x0,size=1
+Write Configure register offset=0x313,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x348,data=0x0,size=1
+Write Configure register offset=0x348,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x348,data=0x0,size=1
+Write Configure register offset=0x348,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xF,size=1
+Write Configure register offset=0x36C,data=0xF,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xF,size=1
+Write Configure register offset=0x36C,data=0xF,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x300,data=0x0,size=1
+Write Configure register offset=0x300,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x301,data=0x0,size=1
+Write Configure register offset=0x301,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x300,data=0x0,size=1
+Write Configure register offset=0x300,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x301,data=0x0,size=1
+Write Configure register offset=0x301,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x351,data=0x0,size=1
+Write Configure register offset=0x351,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x351,data=0x0,size=1
+Write Configure register offset=0x351,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xF,size=1
+Write Configure register offset=0x371,data=0xF,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xF,size=1
+Write Configure register offset=0x371,data=0xF,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x312,data=0x0,size=1
+Write Configure register offset=0x312,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x313,data=0x0,size=1
+Write Configure register offset=0x313,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x312,data=0x0,size=1
+Write Configure register offset=0x312,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x313,data=0x0,size=1
+Write Configure register offset=0x313,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x349,data=0x0,size=1
+Write Configure register offset=0x349,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x349,data=0x0,size=1
+Write Configure register offset=0x349,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0xF,size=1
+Write Configure register offset=0x36C,data=0x3,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x3,size=1
+Write Configure register offset=0x36C,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x302,data=0x0,size=1
+Write Configure register offset=0x302,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x303,data=0x0,size=1
+Write Configure register offset=0x303,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x302,data=0x0,size=1
+Write Configure register offset=0x302,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x303,data=0x0,size=1
+Write Configure register offset=0x303,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x352,data=0x0,size=1
+Write Configure register offset=0x352,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x352,data=0x0,size=1
+Write Configure register offset=0x352,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0xF,size=1
+Write Configure register offset=0x371,data=0x3,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x3,size=1
+Write Configure register offset=0x371,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x314,data=0x0,size=1
+Write Configure register offset=0x314,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x303,data=0x0,size=1
+Write Configure register offset=0x303,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x314,data=0x0,size=1
+Write Configure register offset=0x314,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x303,data=0x0,size=1
+Write Configure register offset=0x303,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x349,data=0x0,size=1
+Write Configure register offset=0x349,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x349,data=0x0,size=1
+Write Configure register offset=0x349,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x0,size=1
+Write Configure register offset=0x36C,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x36C,data=0x0,size=1
+Write Configure register offset=0x36C,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x302,data=0x0,size=1
+Write Configure register offset=0x302,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x303,data=0x0,size=1
+Write Configure register offset=0x303,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x302,data=0x0,size=1
+Write Configure register offset=0x302,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x303,data=0x0,size=1
+Write Configure register offset=0x303,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x352,data=0x0,size=1
+Write Configure register offset=0x352,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x352,data=0x0,size=1
+Write Configure register offset=0x352,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x0,size=1
+Write Configure register offset=0x371,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x371,data=0x0,size=1
+Write Configure register offset=0x371,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x314,data=0x0,size=1
+Write Configure register offset=0x314,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x303,data=0x0,size=1
+Write Configure register offset=0x303,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x314,data=0x0,size=1
+Write Configure register offset=0x314,data=0x0,size=1
+ 
+Read Configure register offset=0x867,data=0x0,size=4
+Write Configure register offset=0x867,data=0x0,size=4
+ 
+Read Configure register offset=0x303,data=0x0,size=1
+Write Configure register offset=0x303,data=0x0,size=1
+ 
+Read Configure register offset=0x614,data=0x8,size=1
+Write Configure register offset=0x614,data=0x0,size=1
+ 
+Read Configure register offset=0x614,data=0x0,size=1
+Write Configure register offset=0x614,data=0x8,size=1
+ 
+Read Configure register offset=0x614,data=0x8,size=1
+Write Configure register offset=0x614,data=0x0,size=1
+ 
+Read Configure register offset=0x614,data=0x0,size=1
+Write Configure register offset=0x613,data=0x8,size=1
+ 
+[25;01H[1m[33m[40mFS0:\> [0m[37m[40m
